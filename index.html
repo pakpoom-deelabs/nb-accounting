@@ -3,9 +3,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NB Accounting | บัญชี · วีซ่า · Work Permit ครบจบในที่เดียว</title>
 <meta name="description" content="สำนักงานบัญชีครบวงจร 10+ ปี ประสบการณ์ รับทำบัญชี ที่ปรึกษาภาษี วีซ่า ใบอนุญาตทำงาน จดทะเบียนบริษัท รายงานธุรกิจเฉพาะทาง (กัญชา, แลกเปลี่ยนเงินตรา)">
-<meta name="theme-color" content="#827A71">
-<link rel="icon" type="image/png" href="images/logo.png">
-<link rel="apple-touch-icon" href="images/logo.png">
+<meta name="theme-color" content="#043566">
+<link rel="icon" type="image/png" href="images/logo.jpg">
+<link rel="apple-touch-icon" href="images/logo.jpg">
 
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/lucide@latest"></script>
@@ -45,9 +45,9 @@ html[lang="en"] [data-en] { display: inline; }
 .cta-bounce-enter.active { opacity: 1; transform: translateY(0) scale(1); }
 
 @keyframes pulseSoft {
-  0% { box-shadow: 0 0 0 0 rgba(129, 120, 114, 0.4); transform: scale(1); }
-  70% { box-shadow: 0 0 0 15px rgba(129, 120, 114, 0); transform: scale(1.02); }
-  100% { box-shadow: 0 0 0 0 rgba(129, 120, 114, 0); transform: scale(1); }
+  0% { box-shadow: 0 0 0 0 rgba(4, 53, 102, 0.4); transform: scale(1); }
+  70% { box-shadow: 0 0 0 15px rgba(4, 53, 102, 0); transform: scale(1.02); }
+  100% { box-shadow: 0 0 0 0 rgba(4, 53, 102, 0); transform: scale(1); }
 }
 .btn-pulse { animation: pulseSoft 2.5s infinite; }
 .btn-pulse:hover { animation: none; transform: scale(1.02); }
@@ -55,9 +55,9 @@ html[lang="en"] [data-en] { display: inline; }
 /* Tick pop */
 @keyframes checkPop {
   0% { transform: scale(0) rotate(-90deg); opacity: 0; filter: blur(4px); }
-  45% { transform: scale(1.4) rotate(15deg); opacity: 1; filter: blur(0px); color: #8F877C; }
-  75% { transform: scale(0.85) rotate(-5deg); color: #827A71; }
-  100% { transform: scale(1) rotate(0deg); opacity: 1; color: #827A71; }
+  45% { transform: scale(1.4) rotate(15deg); opacity: 1; filter: blur(0px); color: #3a6ea5; }
+  75% { transform: scale(0.85) rotate(-5deg); color: #043566; }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; color: #043566; }
 }
 .tick-item iconify-icon { opacity: 0; transform-origin: center; will-change: transform, opacity; }
 .tick-item.active iconify-icon { animation: checkPop 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; animation-delay: 0.35s; }
@@ -76,18 +76,18 @@ html[lang="en"] [data-en] { display: inline; }
 }
 .milestone-badge { transition: all 0.5s ease; }
 .milestone.active .milestone-dot {
-  background-color: #827A71;
-  border-color: #827A71;
+  background-color: #043566;
+  border-color: #043566;
   color: white;
-  box-shadow: 0 0 0 8px rgba(130, 122, 113, 0.15);
+  box-shadow: 0 0 0 8px rgba(4, 53, 102, 0.15);
   transform: scale(1.25);
 }
 .milestone.active .milestone-dot iconify-icon { transform: rotate(360deg) scale(1.1); }
 .milestone.active .milestone-content { opacity: 1; transform: translateX(0) scale(1); }
 .milestone.active .milestone-badge {
-  background-color: #827A71;
+  background-color: #043566;
   color: white;
-  box-shadow: 0 4px 6px -1px rgba(130, 122, 113, 0.3);
+  box-shadow: 0 4px 6px -1px rgba(4, 53, 102, 0.3);
 }
 
 .finance-card-wrapper {
@@ -102,8 +102,8 @@ html[lang="en"] [data-en] { display: inline; }
 #milestone-progress-line { position: relative; }
 #milestone-progress-line::after {
   content: ''; position: absolute; bottom: -3px; left: -2px;
-  width: 5px; height: 5px; background: #827A71; border-radius: 50%;
-  box-shadow: 0 0 10px 3px rgba(130, 122, 113, 0.6);
+  width: 5px; height: 5px; background: #043566; border-radius: 50%;
+  box-shadow: 0 0 10px 3px rgba(4, 53, 102, 0.6);
   opacity: 0; transition: opacity 0.2s ease;
 }
 .drawing-active#milestone-progress-line::after { opacity: 1; }
@@ -128,9 +128,9 @@ html[lang="en"] [data-en] { display: inline; }
 .faq-card-wrapper.is-active { opacity: 1; filter: blur(0); z-index: 20; }
 
 @keyframes pulseGlowWheel {
-  0% { box-shadow: 0 0 0 0 rgba(193, 182, 169, 0.1); }
-  50% { box-shadow: 0 0 30px 0 rgba(193, 182, 169, 0.3); }
-  100% { box-shadow: 0 0 0 0 rgba(193, 182, 169, 0.1); }
+  0% { box-shadow: 0 0 0 0 rgba(137, 164, 199, 0.1); }
+  50% { box-shadow: 0 0 30px 0 rgba(137, 164, 199, 0.3); }
+  100% { box-shadow: 0 0 0 0 rgba(137, 164, 199, 0.1); }
 }
 .pulse-glow-wheel { animation: pulseGlowWheel 4s infinite ease-in-out; }
 
@@ -144,10 +144,10 @@ html[lang="en"] [data-en] { display: inline; }
   <nav class="fixed top-0 w-full z-50 bg-[#FAFAFA]/80 backdrop-blur-md border-b border-stone-200/50">
     <div class="lg:px-8 flex h-20 max-w-7xl mx-auto px-6 items-center justify-between">
       <a href="#" class="flex items-center gap-1 cursor-pointer">
-        <span class="text-[#C1B6A9] font-light tracking-widest text-2xl uppercase">NB</span>
+        <span class="text-[#6b8eb8] font-light tracking-widest text-2xl uppercase">NB</span>
         <div class="relative flex items-center">
-          <span class="text-[#827A71] font-normal text-2xl tracking-tight ml-1">Accounting</span>
-          <div class="absolute -bottom-1 -right-2 w-8 h-0.5 bg-[#827A71]/60 rounded-full rotate-[-5deg]"></div>
+          <span class="text-[#043566] font-normal text-2xl tracking-tight ml-1">Accounting</span>
+          <div class="absolute -bottom-1 -right-2 w-8 h-0.5 bg-[#043566]/60 rounded-full rotate-[-5deg]"></div>
         </div>
       </a>
 
@@ -161,7 +161,7 @@ html[lang="en"] [data-en] { display: inline; }
         <button onclick="toggleLang()" class="text-xs font-bold border border-stone-200 rounded-full px-3 py-1.5 hover:bg-stone-50 transition">
           <span id="lang-btn">TH</span>
         </button>
-        <a href="https://wa.me/66829595750" target="_blank" class="hover:bg-stone-800 transition-all flex text-base md:text-lg font-normal text-white bg-[#817872] rounded-full pt-2.5 pr-5 pb-2.5 pl-5 gap-2 items-center">
+        <a href="https://wa.me/66829595750" target="_blank" class="hover:bg-stone-800 transition-all flex text-base md:text-lg font-normal text-white bg-[#043566] rounded-full pt-2.5 pr-5 pb-2.5 pl-5 gap-2 items-center">
           <span data-th>ติดต่อเรา</span><span data-en>Contact</span>
         </a>
       </div>
@@ -174,7 +174,7 @@ html[lang="en"] [data-en] { display: inline; }
     <section class="lg:px-8 lg:pt-32 lg:pb-32 flex flex-col lg:flex-row gap-16 max-w-7xl mx-auto pt-24 px-6 pb-24 relative items-center">
       <div class="flex-1 w-full z-10 relative">
         <div class="inline-flex gap-2 bg-white/50 border-stone-200 border rounded-full mb-8 pt-1 pr-3 pb-1 pl-3 backdrop-blur-sm items-center">
-          <span class="w-2 h-2 rounded-full bg-[#C1B6A9]"></span>
+          <span class="w-2 h-2 rounded-full bg-[#6b8eb8]"></span>
           <span class="text-base font-normal text-stone-600">
             <span data-th>10+ ปี ประสบการณ์ · 500+ ลูกค้า</span>
             <span data-en>10+ years · 500+ clients</span>
@@ -182,12 +182,12 @@ html[lang="en"] [data-en] { display: inline; }
         </div>
 
         <h1 id="hero-heading" class="lg:text-8xl leading-[1.05] text-6xl tracking-tight mb-8 flex flex-col font-normal">
-          <span class="cta-bounce-enter block text-[#2C2B29] font-playfair" data-th>บัญชี.</span>
-          <span class="cta-bounce-enter block text-[#2C2B29] font-playfair" data-en>Accounting.</span>
-          <span class="cta-bounce-enter block text-[#8F877C] font-playfair" data-th>วีซ่า.</span>
-          <span class="cta-bounce-enter block text-[#8F877C] font-playfair" data-en>Visa.</span>
-          <span class="cta-bounce-enter block font-playfair italic text-[#C8C2B7]" data-th>ครบจบที่เดียว.</span>
-          <span class="cta-bounce-enter block font-playfair italic text-[#C8C2B7]" data-en>All covered.</span>
+          <span class="cta-bounce-enter block text-[#0a1628] font-playfair" data-th>บัญชี.</span>
+          <span class="cta-bounce-enter block text-[#0a1628] font-playfair" data-en>Accounting.</span>
+          <span class="cta-bounce-enter block text-[#3a6ea5] font-playfair" data-th>วีซ่า.</span>
+          <span class="cta-bounce-enter block text-[#3a6ea5] font-playfair" data-en>Visa.</span>
+          <span class="cta-bounce-enter block font-playfair italic text-[#89a4c7]" data-th>ครบจบที่เดียว.</span>
+          <span class="cta-bounce-enter block font-playfair italic text-[#89a4c7]" data-en>All covered.</span>
         </h1>
 
         <p class="leading-relaxed text-xl lg:text-2xl font-light text-stone-500 font-montserrat max-w-2xl mb-10">
@@ -196,7 +196,7 @@ html[lang="en"] [data-en] { display: inline; }
         </p>
 
         <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-          <a href="https://wa.me/66829595750" target="_blank" class="hover:bg-stone-800 transition-all sm:w-auto text-xl font-normal text-white bg-[#817872] w-full rounded-full pt-4 pr-8 pb-4 pl-8 shadow-xl inline-flex items-center gap-2 justify-center">
+          <a href="https://wa.me/66829595750" target="_blank" class="hover:bg-stone-800 transition-all sm:w-auto text-xl font-normal text-white bg-[#043566] w-full rounded-full pt-4 pr-8 pb-4 pl-8 shadow-xl inline-flex items-center gap-2 justify-center">
             <span data-th>ปรึกษาฟรี 15 นาที</span>
             <span data-en>Free 15-min Consult</span>
             <iconify-icon icon="solar:arrow-right-linear" class="text-lg"></iconify-icon>
@@ -218,27 +218,27 @@ html[lang="en"] [data-en] { display: inline; }
             <line x1="300" y1="80" x2="300" y2="200" stroke-width="1" class="text-stone-200" style="stroke-dasharray: 1000; animation: drawLine 2s ease-out both; animation-delay: 0.10s;"></line>
             <line x1="100" y1="100" x2="100" y2="260" stroke-width="1" class="text-stone-200" style="stroke-dasharray: 1000; animation: drawLine 2s ease-out both; animation-delay: 0.15s;"></line>
             <g transform="translate(200, 200)">
-              <polygon points="0,0 -50,-28.87 0,-57.74 50,-28.87" fill="#F5F5F4" stroke="currentColor" style="stroke-dasharray: 1000; animation: drawLine 2s ease-out both, fadeInBlock 2s ease-out both; animation-delay: 0.20s;"></polygon>
+              <polygon points="0,0 -50,-28.87 0,-57.74 50,-28.87" fill="#f0f4f8" stroke="currentColor" style="stroke-dasharray: 1000; animation: drawLine 2s ease-out both, fadeInBlock 2s ease-out both; animation-delay: 0.20s;"></polygon>
               <polygon points="-50,-28.87 -50,28.87 0,57.74 0,0" fill="#FFFFFF" stroke="currentColor" style="stroke-dasharray: 1000; animation: drawLine 2s ease-out both, fadeInBlock 2s ease-out both; animation-delay: 0.25s;"></polygon>
-              <polygon points="0,0 0,57.74 50,28.87 50,-28.87" fill="#E7E5E4" stroke="currentColor" style="stroke-dasharray: 1000; animation: drawLine 2s ease-out both, fadeInBlock 2s ease-out both; animation-delay: 0.30s;"></polygon>
+              <polygon points="0,0 0,57.74 50,28.87 50,-28.87" fill="#dfe7f0" stroke="currentColor" style="stroke-dasharray: 1000; animation: drawLine 2s ease-out both, fadeInBlock 2s ease-out both; animation-delay: 0.30s;"></polygon>
               <g transform="translate(-50, 86.6)">
                 <polygon points="0,0 -50,-28.87 0,-57.74 50,-28.87" fill="#FAFAFA" stroke="currentColor" style="stroke-dasharray: 1000; animation: drawLine 2s ease-out both, fadeInBlock 2s ease-out both; animation-delay: 0.35s;"></polygon>
-                <polygon points="-50,-28.87 -50,28.87 0,57.74 0,0" fill="#F5F5F4" stroke="currentColor" style="stroke-dasharray: 1000; animation: drawLine 2s ease-out both, fadeInBlock 2s ease-out both; animation-delay: 0.40s;"></polygon>
+                <polygon points="-50,-28.87 -50,28.87 0,57.74 0,0" fill="#f0f4f8" stroke="currentColor" style="stroke-dasharray: 1000; animation: drawLine 2s ease-out both, fadeInBlock 2s ease-out both; animation-delay: 0.40s;"></polygon>
                 <polygon points="0,0 0,57.74 50,28.87 50,-28.87" fill="#FFFFFF" stroke="currentColor" style="stroke-dasharray: 1000; animation: drawLine 2s ease-out both, fadeInBlock 2s ease-out both; animation-delay: 0.45s;"></polygon>
               </g>
               <g transform="translate(100, 28.87)">
                 <polygon points="0,0 -50,-28.87 0,-57.74 50,-28.87" fill="#FFFFFF" stroke="currentColor" style="stroke-dasharray: 1000; animation: drawLine 2s ease-out both, fadeInBlock 2s ease-out both; animation-delay: 0.50s;"></polygon>
-                <polygon points="-50,-28.87 -50,28.87 0,57.74 0,0" fill="#E7E5E4" stroke="currentColor" style="stroke-dasharray: 1000; animation: drawLine 2s ease-out both, fadeInBlock 2s ease-out both; animation-delay: 0.55s;"></polygon>
-                <polygon points="0,0 0,57.74 50,28.87 50,-28.87" fill="#F5F5F4" stroke="currentColor" style="stroke-dasharray: 1000; animation: drawLine 2s ease-out both, fadeInBlock 2s ease-out both; animation-delay: 0.60s;"></polygon>
+                <polygon points="-50,-28.87 -50,28.87 0,57.74 0,0" fill="#dfe7f0" stroke="currentColor" style="stroke-dasharray: 1000; animation: drawLine 2s ease-out both, fadeInBlock 2s ease-out both; animation-delay: 0.55s;"></polygon>
+                <polygon points="0,0 0,57.74 50,28.87 50,-28.87" fill="#f0f4f8" stroke="currentColor" style="stroke-dasharray: 1000; animation: drawLine 2s ease-out both, fadeInBlock 2s ease-out both; animation-delay: 0.60s;"></polygon>
               </g>
               <g transform="translate(50, -86.6)">
-                <polygon points="-50,-28.87 -50,28.87 0,57.74 0,0" fill="#F5F5F4" stroke="currentColor" style="stroke-dasharray: 1000; animation: drawLine 2s ease-out both, fadeInBlock 2s ease-out both; animation-delay: 0.65s;"></polygon>
+                <polygon points="-50,-28.87 -50,28.87 0,57.74 0,0" fill="#f0f4f8" stroke="currentColor" style="stroke-dasharray: 1000; animation: drawLine 2s ease-out both, fadeInBlock 2s ease-out both; animation-delay: 0.65s;"></polygon>
                 <polygon points="0,0 0,57.74 50,28.87 50,-28.87" fill="#FFFFFF" stroke="currentColor" style="stroke-dasharray: 1000; animation: drawLine 2s ease-out both, fadeInBlock 2s ease-out both; animation-delay: 0.70s;"></polygon>
               </g>
               <g transform="translate(-100, -28.87)">
                 <polygon points="0,0 -50,-28.87 0,-57.74 50,-28.87" fill="#FFFFFF" stroke="currentColor" style="stroke-dasharray: 1000; animation: drawLine 2s ease-out both, fadeInBlock 2s ease-out both; animation-delay: 0.75s;"></polygon>
                 <polygon points="-50,-28.87 -50,28.87 0,57.74 0,0" fill="#FAFAFA" stroke="currentColor" style="stroke-dasharray: 1000; animation: drawLine 2s ease-out both, fadeInBlock 2s ease-out both; animation-delay: 0.80s;"></polygon>
-                <polygon points="0,0 0,57.74 50,28.87 50,-28.87" fill="#E7E5E4" stroke="currentColor" style="stroke-dasharray: 1000; animation: drawLine 2s ease-out both, fadeInBlock 2s ease-out both; animation-delay: 0.85s;"></polygon>
+                <polygon points="0,0 0,57.74 50,28.87 50,-28.87" fill="#dfe7f0" stroke="currentColor" style="stroke-dasharray: 1000; animation: drawLine 2s ease-out both, fadeInBlock 2s ease-out both; animation-delay: 0.85s;"></polygon>
               </g>
             </g>
             <polyline points="50,258.87 100,287.74 150,258.87 150,201.13" fill="none" stroke-width="1" style="stroke-dasharray: 1000; animation: drawLine 2s ease-out both; animation-delay: 0.90s;"></polyline>
@@ -256,21 +256,21 @@ html[lang="en"] [data-en] { display: inline; }
       <div class="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
 
       <div class="trust-marquee-content flex gap-8 sm:gap-14 shrink-0 px-4 sm:px-7 items-center">
-        <div class="flex items-center gap-2.5 text-stone-600"><iconify-icon icon="solar:verified-check-linear" class="text-[#827A71] text-xl"></iconify-icon><span class="text-[11px] sm:text-xs uppercase tracking-[0.15em] font-medium font-montserrat"><span data-th>ขึ้นทะเบียน TFAC</span><span data-en>TFAC Certified</span></span></div>
-        <div class="flex items-center gap-2.5 text-stone-600"><iconify-icon icon="solar:global-linear" class="text-[#827A71] text-xl"></iconify-icon><span class="text-[11px] sm:text-xs uppercase tracking-[0.15em] font-medium font-montserrat"><span data-th>สื่อสาร 2 ภาษา · ไทย/อังกฤษ</span><span data-en>Bilingual · Thai/English</span></span></div>
-        <div class="flex items-center gap-2.5 text-stone-600"><iconify-icon icon="solar:shield-check-linear" class="text-[#827A71] text-xl"></iconify-icon><span class="text-[11px] sm:text-xs uppercase tracking-[0.15em] font-medium font-montserrat">PDPA Compliant</span></div>
-        <div class="flex items-center gap-2.5 text-stone-600"><iconify-icon icon="solar:clock-circle-linear" class="text-[#827A71] text-xl"></iconify-icon><span class="text-[11px] sm:text-xs uppercase tracking-[0.15em] font-medium font-montserrat"><span data-th>ตอบเร็วภายใน 30 นาที</span><span data-en>Reply within 30 min</span></span></div>
-        <div class="flex items-center gap-2.5 text-stone-600"><iconify-icon icon="solar:buildings-2-linear" class="text-[#827A71] text-xl"></iconify-icon><span class="text-[11px] sm:text-xs uppercase tracking-[0.15em] font-medium font-montserrat"><span data-th>จดบริษัทเสร็จใน 7 วัน</span><span data-en>Company Setup in 7 Days</span></span></div>
-        <div class="flex items-center gap-2.5 text-stone-600"><iconify-icon icon="solar:medal-star-linear" class="text-[#827A71] text-xl"></iconify-icon><span class="text-[11px] sm:text-xs uppercase tracking-[0.15em] font-medium font-montserrat">5/5 Google Reviews</span></div>
+        <div class="flex items-center gap-2.5 text-stone-600"><iconify-icon icon="solar:verified-check-linear" class="text-[#043566] text-xl"></iconify-icon><span class="text-[11px] sm:text-xs uppercase tracking-[0.15em] font-medium font-montserrat"><span data-th>ขึ้นทะเบียน TFAC</span><span data-en>TFAC Certified</span></span></div>
+        <div class="flex items-center gap-2.5 text-stone-600"><iconify-icon icon="solar:global-linear" class="text-[#043566] text-xl"></iconify-icon><span class="text-[11px] sm:text-xs uppercase tracking-[0.15em] font-medium font-montserrat"><span data-th>สื่อสาร 2 ภาษา · ไทย/อังกฤษ</span><span data-en>Bilingual · Thai/English</span></span></div>
+        <div class="flex items-center gap-2.5 text-stone-600"><iconify-icon icon="solar:shield-check-linear" class="text-[#043566] text-xl"></iconify-icon><span class="text-[11px] sm:text-xs uppercase tracking-[0.15em] font-medium font-montserrat">PDPA Compliant</span></div>
+        <div class="flex items-center gap-2.5 text-stone-600"><iconify-icon icon="solar:clock-circle-linear" class="text-[#043566] text-xl"></iconify-icon><span class="text-[11px] sm:text-xs uppercase tracking-[0.15em] font-medium font-montserrat"><span data-th>ตอบเร็วภายใน 30 นาที</span><span data-en>Reply within 30 min</span></span></div>
+        <div class="flex items-center gap-2.5 text-stone-600"><iconify-icon icon="solar:buildings-2-linear" class="text-[#043566] text-xl"></iconify-icon><span class="text-[11px] sm:text-xs uppercase tracking-[0.15em] font-medium font-montserrat"><span data-th>จดบริษัทเสร็จใน 7 วัน</span><span data-en>Company Setup in 7 Days</span></span></div>
+        <div class="flex items-center gap-2.5 text-stone-600"><iconify-icon icon="solar:medal-star-linear" class="text-[#043566] text-xl"></iconify-icon><span class="text-[11px] sm:text-xs uppercase tracking-[0.15em] font-medium font-montserrat">5/5 Google Reviews</span></div>
       </div>
 
       <div class="trust-marquee-content flex gap-8 sm:gap-14 shrink-0 px-4 sm:px-7 items-center" aria-hidden="true">
-        <div class="flex items-center gap-2.5 text-stone-600"><iconify-icon icon="solar:verified-check-linear" class="text-[#827A71] text-xl"></iconify-icon><span class="text-[11px] sm:text-xs uppercase tracking-[0.15em] font-medium font-montserrat"><span data-th>ขึ้นทะเบียน TFAC</span><span data-en>TFAC Certified</span></span></div>
-        <div class="flex items-center gap-2.5 text-stone-600"><iconify-icon icon="solar:global-linear" class="text-[#827A71] text-xl"></iconify-icon><span class="text-[11px] sm:text-xs uppercase tracking-[0.15em] font-medium font-montserrat"><span data-th>สื่อสาร 2 ภาษา · ไทย/อังกฤษ</span><span data-en>Bilingual · Thai/English</span></span></div>
-        <div class="flex items-center gap-2.5 text-stone-600"><iconify-icon icon="solar:shield-check-linear" class="text-[#827A71] text-xl"></iconify-icon><span class="text-[11px] sm:text-xs uppercase tracking-[0.15em] font-medium font-montserrat">PDPA Compliant</span></div>
-        <div class="flex items-center gap-2.5 text-stone-600"><iconify-icon icon="solar:clock-circle-linear" class="text-[#827A71] text-xl"></iconify-icon><span class="text-[11px] sm:text-xs uppercase tracking-[0.15em] font-medium font-montserrat"><span data-th>ตอบเร็วภายใน 30 นาที</span><span data-en>Reply within 30 min</span></span></div>
-        <div class="flex items-center gap-2.5 text-stone-600"><iconify-icon icon="solar:buildings-2-linear" class="text-[#827A71] text-xl"></iconify-icon><span class="text-[11px] sm:text-xs uppercase tracking-[0.15em] font-medium font-montserrat"><span data-th>จดบริษัทเสร็จใน 7 วัน</span><span data-en>Company Setup in 7 Days</span></span></div>
-        <div class="flex items-center gap-2.5 text-stone-600"><iconify-icon icon="solar:medal-star-linear" class="text-[#827A71] text-xl"></iconify-icon><span class="text-[11px] sm:text-xs uppercase tracking-[0.15em] font-medium font-montserrat">5/5 Google Reviews</span></div>
+        <div class="flex items-center gap-2.5 text-stone-600"><iconify-icon icon="solar:verified-check-linear" class="text-[#043566] text-xl"></iconify-icon><span class="text-[11px] sm:text-xs uppercase tracking-[0.15em] font-medium font-montserrat"><span data-th>ขึ้นทะเบียน TFAC</span><span data-en>TFAC Certified</span></span></div>
+        <div class="flex items-center gap-2.5 text-stone-600"><iconify-icon icon="solar:global-linear" class="text-[#043566] text-xl"></iconify-icon><span class="text-[11px] sm:text-xs uppercase tracking-[0.15em] font-medium font-montserrat"><span data-th>สื่อสาร 2 ภาษา · ไทย/อังกฤษ</span><span data-en>Bilingual · Thai/English</span></span></div>
+        <div class="flex items-center gap-2.5 text-stone-600"><iconify-icon icon="solar:shield-check-linear" class="text-[#043566] text-xl"></iconify-icon><span class="text-[11px] sm:text-xs uppercase tracking-[0.15em] font-medium font-montserrat">PDPA Compliant</span></div>
+        <div class="flex items-center gap-2.5 text-stone-600"><iconify-icon icon="solar:clock-circle-linear" class="text-[#043566] text-xl"></iconify-icon><span class="text-[11px] sm:text-xs uppercase tracking-[0.15em] font-medium font-montserrat"><span data-th>ตอบเร็วภายใน 30 นาที</span><span data-en>Reply within 30 min</span></span></div>
+        <div class="flex items-center gap-2.5 text-stone-600"><iconify-icon icon="solar:buildings-2-linear" class="text-[#043566] text-xl"></iconify-icon><span class="text-[11px] sm:text-xs uppercase tracking-[0.15em] font-medium font-montserrat"><span data-th>จดบริษัทเสร็จใน 7 วัน</span><span data-en>Company Setup in 7 Days</span></span></div>
+        <div class="flex items-center gap-2.5 text-stone-600"><iconify-icon icon="solar:medal-star-linear" class="text-[#043566] text-xl"></iconify-icon><span class="text-[11px] sm:text-xs uppercase tracking-[0.15em] font-medium font-montserrat">5/5 Google Reviews</span></div>
       </div>
     </div>
 
@@ -281,17 +281,17 @@ html[lang="en"] [data-en] { display: inline; }
 
         <div id="features-heading" class="relative z-40 text-center mb-10 lg:mb-16 opacity-0 translate-y-8 will-change-transform max-w-4xl mx-auto">
           <div class="inline-flex bg-white border-stone-200 border rounded-full mb-8 pt-1 pr-3 pb-1 pl-3 shadow-sm gap-2 items-center">
-            <span class="w-2 h-2 rounded-full bg-[#C1B6A9]"></span>
+            <span class="w-2 h-2 rounded-full bg-[#6b8eb8]"></span>
             <span class="text-sm font-normal text-stone-600"><span data-th>ครบวงจร</span><span data-en>End-to-end</span></span>
-            <span class="w-2 h-2 rounded-full bg-[#C1B6A9]"></span>
+            <span class="w-2 h-2 rounded-full bg-[#6b8eb8]"></span>
             <span class="text-sm font-normal text-stone-600"><span data-th>ไม่ต้องวิ่งเอง</span><span data-en>No legwork</span></span>
           </div>
 
           <h2 class="text-5xl lg:text-7xl leading-[1.05] tracking-tight flex flex-col font-normal items-center text-center">
-            <span class="font-playfair text-[#2C2B29]" data-th>ทุกบริการที่ธุรกิจ</span>
-            <span class="font-playfair text-[#2C2B29]" data-en>Everything your business</span>
-            <span class="font-playfair italic text-[#8F877C]" data-th>ของคุณต้องการ</span>
-            <span class="font-playfair italic text-[#8F877C]" data-en>needs to grow in Thailand</span>
+            <span class="font-playfair text-[#0a1628]" data-th>ทุกบริการที่ธุรกิจ</span>
+            <span class="font-playfair text-[#0a1628]" data-en>Everything your business</span>
+            <span class="font-playfair italic text-[#3a6ea5]" data-th>ของคุณต้องการ</span>
+            <span class="font-playfair italic text-[#3a6ea5]" data-en>needs to grow in Thailand</span>
           </h2>
         </div>
 
@@ -299,7 +299,7 @@ html[lang="en"] [data-en] { display: inline; }
 
           <div id="feature-card-1" class="absolute inset-0 bg-white rounded-[2rem] p-8 lg:p-10 border border-stone-200 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] flex flex-col will-change-transform origin-bottom z-10">
             <div class="w-14 h-14 rounded-2xl border border-stone-100 bg-[#FAFAFA] flex items-center justify-center mb-6 shadow-sm">
-              <iconify-icon icon="solar:calculator-linear" class="text-2xl text-[#827A71]"></iconify-icon>
+              <iconify-icon icon="solar:calculator-linear" class="text-2xl text-[#043566]"></iconify-icon>
             </div>
             <h3 class="text-2xl lg:text-3xl font-normal text-stone-900 tracking-tight mb-4 mt-auto">
               <span data-th>รับทำบัญชี</span><span data-en>Accounting</span>
@@ -312,7 +312,7 @@ html[lang="en"] [data-en] { display: inline; }
 
           <div id="feature-card-3" class="absolute inset-0 bg-white rounded-[2rem] p-8 lg:p-10 border border-stone-200 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] flex flex-col will-change-transform origin-bottom z-20">
             <div class="w-14 h-14 rounded-2xl border border-stone-100 bg-[#FAFAFA] flex items-center justify-center mb-6 shadow-sm">
-              <iconify-icon icon="solar:passport-linear" class="text-2xl text-[#827A71]"></iconify-icon>
+              <iconify-icon icon="solar:passport-linear" class="text-2xl text-[#043566]"></iconify-icon>
             </div>
             <h3 class="text-2xl lg:text-3xl font-normal text-stone-900 tracking-tight mb-4 mt-auto">
               <span data-th>วีซ่า & Work Permit</span><span data-en>Visa & Work Permit</span>
@@ -323,9 +323,9 @@ html[lang="en"] [data-en] { display: inline; }
             </p>
           </div>
 
-          <div id="feature-card-2" class="absolute inset-0 bg-[#2C2B29] rounded-[2rem] p-8 lg:p-10 border border-[#3A3936] shadow-[0_24px_48px_-12px_rgba(0,0,0,0.4)] flex flex-col will-change-transform origin-bottom z-30">
-            <div class="w-14 h-14 rounded-2xl border border-[#3A3936] bg-[#1F1E1D] flex items-center justify-center mb-6 shadow-inner">
-              <iconify-icon icon="solar:hand-money-linear" class="text-2xl text-[#C1B6A9]"></iconify-icon>
+          <div id="feature-card-2" class="absolute inset-0 bg-[#0a1628] rounded-[2rem] p-8 lg:p-10 border border-[#0f2540] shadow-[0_24px_48px_-12px_rgba(0,0,0,0.4)] flex flex-col will-change-transform origin-bottom z-30">
+            <div class="w-14 h-14 rounded-2xl border border-[#0f2540] bg-[#051d36] flex items-center justify-center mb-6 shadow-inner">
+              <iconify-icon icon="solar:hand-money-linear" class="text-2xl text-[#6b8eb8]"></iconify-icon>
             </div>
             <h3 class="text-2xl lg:text-3xl font-normal text-white tracking-tight mb-4 mt-auto">
               <span data-th>ที่ปรึกษาภาษี</span><span data-en>Tax Consulting</span>
@@ -341,22 +341,22 @@ html[lang="en"] [data-en] { display: inline; }
     </section>
 
     <!-- ============ PARALLAX GALLERY ============ -->
-    <section id="about" class="relative h-[250vh] bg-[#161514] border-y border-[#2C2B29]">
+    <section id="about" class="relative h-[250vh] bg-[#050e1d] border-y border-[#0a1628]">
       <div class="sticky top-0 h-screen w-full overflow-hidden flex items-center justify-center">
-        <div class="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#2C2B29]/30 via-[#161514] to-[#11100F] absolute top-0 right-0 bottom-0 left-0"></div>
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#C1B6A9]/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#0a1628]/30 via-[#050e1d] to-[#020812] absolute top-0 right-0 bottom-0 left-0"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#6b8eb8]/10 rounded-full blur-[120px] pointer-events-none"></div>
 
-        <div id="gallery-content-wrapper" class="relative z-20 text-center p-8 lg:p-14 rounded-3xl bg-[#2C2B29]/40 backdrop-blur-2xl border border-white/10 shadow-[0_0_40px_rgba(0,0,0,0.3)] max-w-2xl mx-6">
-          <span class="cta-bounce-enter uppercase block text-sm font-semibold text-[#C1B6A9] tracking-[0.2em] font-montserrat mb-6">
+        <div id="gallery-content-wrapper" class="relative z-20 text-center p-8 lg:p-14 rounded-3xl bg-[#0a1628]/40 backdrop-blur-2xl border border-white/10 shadow-[0_0_40px_rgba(0,0,0,0.3)] max-w-2xl mx-6">
+          <span class="cta-bounce-enter uppercase block text-sm font-semibold text-[#6b8eb8] tracking-[0.2em] font-montserrat mb-6">
             <span data-th>ทีมที่ไว้ใจได้</span><span data-en>Trusted Team</span>
           </span>
           <h2 class="text-5xl lg:text-7xl leading-[1.05] tracking-tight mb-8 flex flex-col font-normal items-center">
             <span class="cta-bounce-enter block text-white font-playfair" data-th>10+ ปี.</span>
             <span class="cta-bounce-enter block text-white font-playfair" data-en>10+ years.</span>
-            <span class="cta-bounce-enter block text-[#C1B6A9] font-playfair" data-th>500+ ลูกค้า.</span>
-            <span class="cta-bounce-enter block text-[#C1B6A9] font-playfair" data-en>500+ clients.</span>
-            <span class="cta-bounce-enter block font-playfair italic text-[#827A71]" data-th>นับไม่ถ้วนงานเอกสาร.</span>
-            <span class="cta-bounce-enter block font-playfair italic text-[#827A71]" data-en>Countless filings.</span>
+            <span class="cta-bounce-enter block text-[#6b8eb8] font-playfair" data-th>500+ ลูกค้า.</span>
+            <span class="cta-bounce-enter block text-[#6b8eb8] font-playfair" data-en>500+ clients.</span>
+            <span class="cta-bounce-enter block font-playfair italic text-[#043566]" data-th>นับไม่ถ้วนงานเอกสาร.</span>
+            <span class="cta-bounce-enter block font-playfair italic text-[#043566]" data-en>Countless filings.</span>
           </h2>
           <p class="cta-bounce-enter text-xl lg:text-2xl text-stone-300 font-montserrat font-light leading-relaxed max-w-lg mx-auto">
             <span data-th>ตั้งแต่ SME ร้านค้า freelancer ไปจนถึงบริษัทต่างชาติ เราเชื่อว่าเรื่องเอกสารไม่ควรเป็นอุปสรรคของการเติบโต</span>
@@ -364,19 +364,19 @@ html[lang="en"] [data-en] { display: inline; }
           </p>
         </div>
 
-        <div class="parallax-item absolute w-64 lg:w-80 p-2 bg-[#2C2B29]/30 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/50 rounded-2xl will-change-transform z-10" style="top: -5%; left: 8%;" data-speed="0.8" data-rotation="-6deg"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800" alt="Documents" class="w-full h-auto rounded-xl object-cover aspect-[4/5]"></div>
-        <div class="parallax-item absolute w-60 lg:w-72 p-2 bg-[#2C2B29]/30 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/50 rounded-2xl will-change-transform z-30 hidden md:block" style="top: 15%; right: 12%;" data-speed="0.6" data-rotation="4deg"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=800" alt="Office" class="w-full h-auto rounded-xl object-cover aspect-video"></div>
-        <div class="parallax-item absolute w-40 lg:w-56 p-2 bg-[#2C2B29]/30 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/50 rounded-2xl will-change-transform z-0" style="top: 80%; left: 30%;" data-speed="-0.5" data-rotation="-3deg"><img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=800" alt="Finance" class="w-full h-auto rounded-xl object-cover aspect-square"></div>
-        <div class="parallax-item absolute w-52 lg:w-64 p-2 bg-[#2C2B29]/30 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/50 rounded-2xl will-change-transform z-0 hidden lg:block" style="top: 90%; right: 28%;" data-speed="-0.7" data-rotation="5deg"><img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=800" alt="Team meeting" class="w-full h-auto rounded-xl object-cover aspect-[4/5]"></div>
-        <div class="parallax-item absolute w-48 lg:w-64 p-2 bg-[#2C2B29]/30 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/50 rounded-2xl will-change-transform z-10" style="top: 75%; left: 45%;" data-speed="-0.3" data-rotation="-2deg"><img src="https://images.unsplash.com/photo-1573497491765-dccce02b29df?auto=format&fit=crop&q=80&w=800" alt="Consultation" class="w-full h-auto rounded-xl object-cover aspect-[4/3]"></div>
-        <div class="parallax-item absolute w-56 lg:w-72 p-2 bg-[#2C2B29]/30 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/50 rounded-2xl will-change-transform z-30 hidden sm:block" style="top: -15%; left: 2%;" data-speed="1.2" data-rotation="8deg"><img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=800" alt="Accountant" class="w-full h-auto rounded-xl object-cover aspect-[3/4]"></div>
-        <div class="parallax-item absolute w-40 lg:w-56 p-2 bg-[#2C2B29]/30 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/50 rounded-2xl will-change-transform z-10 hidden md:block" style="top: 0%; left: 65%;" data-speed="0.9" data-rotation="-7deg"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800" alt="Client" class="w-full h-auto rounded-xl object-cover aspect-square"></div>
-        <div class="parallax-item absolute w-52 lg:w-64 p-2 bg-[#2C2B29]/30 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/50 rounded-2xl will-change-transform z-40" style="top: -20%; right: 8%;" data-speed="1.5" data-rotation="3deg"><img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=800" alt="Tax" class="w-full h-auto rounded-xl object-cover aspect-[4/5]"></div>
-        <div class="parallax-item absolute w-48 lg:w-60 p-2 bg-[#2C2B29]/30 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/50 rounded-2xl will-change-transform z-10 hidden lg:block" style="top: 110%; right: -2%;" data-speed="-1.1" data-rotation="-5deg"><img src="https://images.unsplash.com/photo-1556740714-a8395b3bf30f?auto=format&fit=crop&q=80&w=800" alt="Advisor" class="w-full h-auto rounded-xl object-cover aspect-video"></div>
-        <div class="parallax-item absolute w-44 lg:w-56 p-2 bg-[#2C2B29]/30 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/50 rounded-2xl will-change-transform z-20 hidden sm:block" style="top: -10%; right: 25%;" data-speed="1.3" data-rotation="6deg"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800" alt="Executive" class="w-full h-auto rounded-xl object-cover aspect-square"></div>
-        <div class="parallax-item absolute w-48 lg:w-64 p-2 bg-[#2C2B29]/30 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/50 rounded-2xl will-change-transform z-30 hidden md:block" style="top: 120%; left: 15%;" data-speed="-1.5" data-rotation="-10deg"><img src="https://images.unsplash.com/photo-1664575602554-2087b04935a5?auto=format&fit=crop&q=80&w=800" alt="Passport" class="w-full h-auto rounded-xl object-cover aspect-square"></div>
-        <div class="parallax-item absolute w-32 lg:w-48 p-2 bg-[#2C2B29]/30 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/50 rounded-2xl will-change-transform z-10" style="top: 5%; right: 40%;" data-speed="0.5" data-rotation="12deg"><img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=800" alt="Signing" class="w-full h-auto rounded-xl object-cover aspect-[3/4]"></div>
-        <div class="parallax-item absolute w-40 lg:w-56 p-2 bg-[#2C2B29]/30 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/50 rounded-2xl will-change-transform z-0" style="top: 95%; right: 40%;" data-speed="-0.9" data-rotation="3deg"><img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=800" alt="Handshake" class="w-full h-auto rounded-xl object-cover aspect-[4/5]"></div>
+        <div class="parallax-item absolute w-64 lg:w-80 p-2 bg-[#0a1628]/30 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/50 rounded-2xl will-change-transform z-10" style="top: -5%; left: 8%;" data-speed="0.8" data-rotation="-6deg"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800" alt="Documents" class="w-full h-auto rounded-xl object-cover aspect-[4/5]"></div>
+        <div class="parallax-item absolute w-60 lg:w-72 p-2 bg-[#0a1628]/30 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/50 rounded-2xl will-change-transform z-30 hidden md:block" style="top: 15%; right: 12%;" data-speed="0.6" data-rotation="4deg"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=800" alt="Office" class="w-full h-auto rounded-xl object-cover aspect-video"></div>
+        <div class="parallax-item absolute w-40 lg:w-56 p-2 bg-[#0a1628]/30 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/50 rounded-2xl will-change-transform z-0" style="top: 80%; left: 30%;" data-speed="-0.5" data-rotation="-3deg"><img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=800" alt="Finance" class="w-full h-auto rounded-xl object-cover aspect-square"></div>
+        <div class="parallax-item absolute w-52 lg:w-64 p-2 bg-[#0a1628]/30 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/50 rounded-2xl will-change-transform z-0 hidden lg:block" style="top: 90%; right: 28%;" data-speed="-0.7" data-rotation="5deg"><img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=800" alt="Team meeting" class="w-full h-auto rounded-xl object-cover aspect-[4/5]"></div>
+        <div class="parallax-item absolute w-48 lg:w-64 p-2 bg-[#0a1628]/30 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/50 rounded-2xl will-change-transform z-10" style="top: 75%; left: 45%;" data-speed="-0.3" data-rotation="-2deg"><img src="https://images.unsplash.com/photo-1573497491765-dccce02b29df?auto=format&fit=crop&q=80&w=800" alt="Consultation" class="w-full h-auto rounded-xl object-cover aspect-[4/3]"></div>
+        <div class="parallax-item absolute w-56 lg:w-72 p-2 bg-[#0a1628]/30 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/50 rounded-2xl will-change-transform z-30 hidden sm:block" style="top: -15%; left: 2%;" data-speed="1.2" data-rotation="8deg"><img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=800" alt="Accountant" class="w-full h-auto rounded-xl object-cover aspect-[3/4]"></div>
+        <div class="parallax-item absolute w-40 lg:w-56 p-2 bg-[#0a1628]/30 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/50 rounded-2xl will-change-transform z-10 hidden md:block" style="top: 0%; left: 65%;" data-speed="0.9" data-rotation="-7deg"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800" alt="Client" class="w-full h-auto rounded-xl object-cover aspect-square"></div>
+        <div class="parallax-item absolute w-52 lg:w-64 p-2 bg-[#0a1628]/30 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/50 rounded-2xl will-change-transform z-40" style="top: -20%; right: 8%;" data-speed="1.5" data-rotation="3deg"><img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=800" alt="Tax" class="w-full h-auto rounded-xl object-cover aspect-[4/5]"></div>
+        <div class="parallax-item absolute w-48 lg:w-60 p-2 bg-[#0a1628]/30 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/50 rounded-2xl will-change-transform z-10 hidden lg:block" style="top: 110%; right: -2%;" data-speed="-1.1" data-rotation="-5deg"><img src="https://images.unsplash.com/photo-1556740714-a8395b3bf30f?auto=format&fit=crop&q=80&w=800" alt="Advisor" class="w-full h-auto rounded-xl object-cover aspect-video"></div>
+        <div class="parallax-item absolute w-44 lg:w-56 p-2 bg-[#0a1628]/30 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/50 rounded-2xl will-change-transform z-20 hidden sm:block" style="top: -10%; right: 25%;" data-speed="1.3" data-rotation="6deg"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800" alt="Executive" class="w-full h-auto rounded-xl object-cover aspect-square"></div>
+        <div class="parallax-item absolute w-48 lg:w-64 p-2 bg-[#0a1628]/30 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/50 rounded-2xl will-change-transform z-30 hidden md:block" style="top: 120%; left: 15%;" data-speed="-1.5" data-rotation="-10deg"><img src="https://images.unsplash.com/photo-1664575602554-2087b04935a5?auto=format&fit=crop&q=80&w=800" alt="Passport" class="w-full h-auto rounded-xl object-cover aspect-square"></div>
+        <div class="parallax-item absolute w-32 lg:w-48 p-2 bg-[#0a1628]/30 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/50 rounded-2xl will-change-transform z-10" style="top: 5%; right: 40%;" data-speed="0.5" data-rotation="12deg"><img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=800" alt="Signing" class="w-full h-auto rounded-xl object-cover aspect-[3/4]"></div>
+        <div class="parallax-item absolute w-40 lg:w-56 p-2 bg-[#0a1628]/30 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/50 rounded-2xl will-change-transform z-0" style="top: 95%; right: 40%;" data-speed="-0.9" data-rotation="3deg"><img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=800" alt="Handshake" class="w-full h-auto rounded-xl object-cover aspect-[4/5]"></div>
       </div>
     </section>
 
@@ -390,19 +390,19 @@ html[lang="en"] [data-en] { display: inline; }
 
             <div class="order-2 lg:order-1" id="live-quote-text-content">
               <div class="cta-bounce-enter inline-flex items-center gap-2 mb-6">
-                <iconify-icon icon="solar:buildings-2-linear" class="text-3xl text-[#827A71]"></iconify-icon>
-                <span class="uppercase text-xs font-medium tracking-widest text-[#827A71] font-montserrat">
+                <iconify-icon icon="solar:buildings-2-linear" class="text-3xl text-[#043566]"></iconify-icon>
+                <span class="uppercase text-xs font-medium tracking-widest text-[#043566] font-montserrat">
                   <span data-th>จดบริษัทใน 7 วัน</span><span data-en>Company Setup in 7 Days</span>
                 </span>
               </div>
 
               <h2 class="text-5xl lg:text-6xl font-normal mb-8 leading-[1.05] tracking-tight flex flex-col">
-                <span class="cta-bounce-enter block text-[#2C2B29] font-playfair" data-th>เริ่มต้นธุรกิจ</span>
-                <span class="cta-bounce-enter block text-[#2C2B29] font-playfair" data-en>Start your business</span>
-                <span class="cta-bounce-enter block text-[#8F877C] font-playfair" data-th>โดยไม่ต้อง</span>
-                <span class="cta-bounce-enter block text-[#8F877C] font-playfair" data-en>without the</span>
-                <span class="cta-bounce-enter block font-playfair italic text-[#C8C2B7]" data-th>วิ่งหาเอง.</span>
-                <span class="cta-bounce-enter block font-playfair italic text-[#C8C2B7]" data-en>paperwork chaos.</span>
+                <span class="cta-bounce-enter block text-[#0a1628] font-playfair" data-th>เริ่มต้นธุรกิจ</span>
+                <span class="cta-bounce-enter block text-[#0a1628] font-playfair" data-en>Start your business</span>
+                <span class="cta-bounce-enter block text-[#3a6ea5] font-playfair" data-th>โดยไม่ต้อง</span>
+                <span class="cta-bounce-enter block text-[#3a6ea5] font-playfair" data-en>without the</span>
+                <span class="cta-bounce-enter block font-playfair italic text-[#89a4c7]" data-th>วิ่งหาเอง.</span>
+                <span class="cta-bounce-enter block font-playfair italic text-[#89a4c7]" data-en>paperwork chaos.</span>
               </h2>
 
               <p class="cta-bounce-enter text-xl text-stone-500 font-light leading-relaxed mb-10 font-montserrat">
@@ -411,16 +411,16 @@ html[lang="en"] [data-en] { display: inline; }
               </p>
 
               <ul class="space-y-4 mb-10 text-stone-600">
-                <li class="cta-bounce-enter tick-item flex items-center gap-3"><iconify-icon icon="solar:check-circle-linear" class="text-[#827A71] text-2xl"></iconify-icon><span class="text-lg font-light font-montserrat"><span data-th>ราคาโปร่งใส ไม่มีค่าซ่อน</span><span data-en>Transparent pricing, zero hidden fees</span></span></li>
-                <li class="cta-bounce-enter tick-item flex items-center gap-3"><iconify-icon icon="solar:check-circle-linear" class="text-[#827A71] text-2xl"></iconify-icon><span class="text-lg font-light font-montserrat"><span data-th>รองรับต่างชาติถือหุ้น & BOI</span><span data-en>Foreign ownership & BOI supported</span></span></li>
-                <li class="cta-bounce-enter tick-item flex items-center gap-3"><iconify-icon icon="solar:check-circle-linear" class="text-[#827A71] text-2xl"></iconify-icon><span class="text-lg font-light font-montserrat"><span data-th>ตามสถานะได้ทุกขั้นตอน</span><span data-en>Track every milestone end-to-end</span></span></li>
+                <li class="cta-bounce-enter tick-item flex items-center gap-3"><iconify-icon icon="solar:check-circle-linear" class="text-[#043566] text-2xl"></iconify-icon><span class="text-lg font-light font-montserrat"><span data-th>ราคาโปร่งใส ไม่มีค่าซ่อน</span><span data-en>Transparent pricing, zero hidden fees</span></span></li>
+                <li class="cta-bounce-enter tick-item flex items-center gap-3"><iconify-icon icon="solar:check-circle-linear" class="text-[#043566] text-2xl"></iconify-icon><span class="text-lg font-light font-montserrat"><span data-th>รองรับต่างชาติถือหุ้น & BOI</span><span data-en>Foreign ownership & BOI supported</span></span></li>
+                <li class="cta-bounce-enter tick-item flex items-center gap-3"><iconify-icon icon="solar:check-circle-linear" class="text-[#043566] text-2xl"></iconify-icon><span class="text-lg font-light font-montserrat"><span data-th>ตามสถานะได้ทุกขั้นตอน</span><span data-en>Track every milestone end-to-end</span></span></li>
               </ul>
             </div>
 
             <div class="order-1 lg:order-2 relative" id="invoice-section">
               <div class="bg-white/80 backdrop-blur-2xl border border-stone-200 rounded-[2rem] shadow-2xl overflow-hidden relative z-10 flex flex-col h-[550px]">
 
-                <div id="quote-header" class="bg-[#F5F4F2] p-6 border-b border-stone-200 flex justify-between items-end relative z-30 shadow-sm opacity-0 will-change-transform">
+                <div id="quote-header" class="bg-[#f0f4f8] p-6 border-b border-stone-200 flex justify-between items-end relative z-30 shadow-sm opacity-0 will-change-transform">
                   <div>
                     <p class="text-xs font-medium tracking-widest uppercase text-stone-500 mb-1">Case #NB-2026</p>
                     <h3 class="text-2xl font-normal text-stone-900 tracking-tight">
@@ -437,35 +437,35 @@ html[lang="en"] [data-en] { display: inline; }
                   <div id="mockup-scroll-content" class="absolute top-0 left-0 w-full p-6 pb-6 flex flex-col gap-4 will-change-transform">
 
                     <div class="checkout-anim-item opacity-0 flex gap-4 items-center p-3 rounded-2xl bg-white border border-stone-100 shadow-sm" data-anim="left">
-                      <div class="w-16 h-16 rounded-xl shrink-0 bg-[#FAFAFA] flex items-center justify-center text-[#827A71] border border-stone-200"><iconify-icon icon="solar:document-text-linear" class="text-2xl"></iconify-icon></div>
+                      <div class="w-16 h-16 rounded-xl shrink-0 bg-[#FAFAFA] flex items-center justify-center text-[#043566] border border-stone-200"><iconify-icon icon="solar:document-text-linear" class="text-2xl"></iconify-icon></div>
                       <div class="flex-1"><h4 class="font-normal text-stone-900 text-base tracking-tight"><span data-th>จองชื่อบริษัท + MoA</span><span data-en>Name Reservation + MoA</span></h4><p class="text-sm text-stone-500 mt-0.5 font-light"><span data-th>DBD · วันที่ 1</span><span data-en>DBD · Day 1</span></p></div>
                       <div class="text-right"><p class="text-base font-normal text-stone-900 tracking-tight">฿ 2,500</p></div>
                     </div>
 
                     <div class="checkout-anim-item opacity-0 flex gap-4 items-center p-3 rounded-2xl bg-white border border-stone-100 shadow-sm" data-anim="right">
-                      <div class="w-16 h-16 rounded-xl shrink-0 bg-[#FAFAFA] flex items-center justify-center text-[#827A71] border border-stone-200"><iconify-icon icon="solar:file-check-linear" class="text-2xl"></iconify-icon></div>
+                      <div class="w-16 h-16 rounded-xl shrink-0 bg-[#FAFAFA] flex items-center justify-center text-[#043566] border border-stone-200"><iconify-icon icon="solar:file-check-linear" class="text-2xl"></iconify-icon></div>
                       <div class="flex-1"><h4 class="font-normal text-stone-900 text-base tracking-tight"><span data-th>จดทะเบียน DBD + Tax ID</span><span data-en>DBD Registration + Tax ID</span></h4><p class="text-sm text-stone-500 mt-0.5 font-light"><span data-th>ทุน 2M · วันที่ 3</span><span data-en>Capital 2M · Day 3</span></p></div>
                       <div class="text-right"><p class="text-base font-normal text-stone-900 tracking-tight">฿ 5,500</p></div>
                     </div>
 
                     <div id="fast-stack-container" class="flex flex-col mt-2 px-1">
-                      <div class="fast-item opacity-0 flex items-center gap-3 p-2 bg-white rounded-xl border border-stone-100 shadow-[0_2px_4px_rgba(0,0,0,0.02)]"><div class="w-8 h-8 bg-[#F5F4F2] rounded-lg border border-stone-200 flex items-center justify-center text-stone-400"><iconify-icon icon="solar:bill-list-linear" class="text-sm"></iconify-icon></div><div class="h-2 w-24 bg-stone-100 rounded-full"></div><div class="flex-1"></div><div class="h-2 w-8 bg-stone-100 rounded-full"></div></div>
-                      <div class="fast-item opacity-0 flex items-center gap-3 p-2 bg-white rounded-xl border border-stone-100 shadow-[0_2px_4px_rgba(0,0,0,0.02)]"><div class="w-8 h-8 bg-[#F5F4F2] rounded-lg border border-stone-200 flex items-center justify-center text-stone-400"><iconify-icon icon="solar:user-id-linear" class="text-sm"></iconify-icon></div><div class="h-2 w-32 bg-stone-100 rounded-full"></div><div class="flex-1"></div><div class="h-2 w-10 bg-stone-100 rounded-full"></div></div>
-                      <div class="fast-item opacity-0 flex items-center gap-3 p-2 bg-white rounded-xl border border-stone-100 shadow-[0_2px_4px_rgba(0,0,0,0.02)]"><div class="w-8 h-8 bg-[#F5F4F2] rounded-lg border border-stone-200 flex items-center justify-center text-stone-400"><iconify-icon icon="solar:shield-check-linear" class="text-sm"></iconify-icon></div><div class="h-2 w-20 bg-stone-100 rounded-full"></div><div class="flex-1"></div><div class="h-2 w-12 bg-stone-100 rounded-full"></div></div>
-                      <div class="fast-item opacity-0 flex items-center gap-3 p-2 bg-white rounded-xl border border-stone-100 shadow-[0_2px_4px_rgba(0,0,0,0.02)]"><div class="w-8 h-8 bg-[#F5F4F2] rounded-lg border border-stone-200 flex items-center justify-center text-stone-400"><iconify-icon icon="solar:document-add-linear" class="text-sm"></iconify-icon></div><div class="h-2 w-28 bg-stone-100 rounded-full"></div><div class="flex-1"></div><div class="h-2 w-8 bg-stone-100 rounded-full"></div></div>
-                      <div class="fast-item opacity-0 flex items-center gap-3 p-2 bg-white rounded-xl border border-stone-100 shadow-[0_2px_4px_rgba(0,0,0,0.02)]"><div class="w-8 h-8 bg-[#F5F4F2] rounded-lg border border-stone-200 flex items-center justify-center text-stone-400"><iconify-icon icon="solar:pen-new-square-linear" class="text-sm"></iconify-icon></div><div class="h-2 w-24 bg-stone-100 rounded-full"></div><div class="flex-1"></div><div class="h-2 w-10 bg-stone-100 rounded-full"></div></div>
-                      <div class="fast-item opacity-0 flex items-center gap-3 p-2 bg-white rounded-xl border border-stone-100 shadow-[0_2px_4px_rgba(0,0,0,0.02)]"><div class="w-8 h-8 bg-[#F5F4F2] rounded-lg border border-stone-200 flex items-center justify-center text-stone-400"><iconify-icon icon="solar:stamp-linear" class="text-sm"></iconify-icon></div><div class="h-2 w-20 bg-stone-100 rounded-full"></div><div class="flex-1"></div><div class="h-2 w-8 bg-stone-100 rounded-full"></div></div>
+                      <div class="fast-item opacity-0 flex items-center gap-3 p-2 bg-white rounded-xl border border-stone-100 shadow-[0_2px_4px_rgba(0,0,0,0.02)]"><div class="w-8 h-8 bg-[#f0f4f8] rounded-lg border border-stone-200 flex items-center justify-center text-stone-400"><iconify-icon icon="solar:bill-list-linear" class="text-sm"></iconify-icon></div><div class="h-2 w-24 bg-stone-100 rounded-full"></div><div class="flex-1"></div><div class="h-2 w-8 bg-stone-100 rounded-full"></div></div>
+                      <div class="fast-item opacity-0 flex items-center gap-3 p-2 bg-white rounded-xl border border-stone-100 shadow-[0_2px_4px_rgba(0,0,0,0.02)]"><div class="w-8 h-8 bg-[#f0f4f8] rounded-lg border border-stone-200 flex items-center justify-center text-stone-400"><iconify-icon icon="solar:user-id-linear" class="text-sm"></iconify-icon></div><div class="h-2 w-32 bg-stone-100 rounded-full"></div><div class="flex-1"></div><div class="h-2 w-10 bg-stone-100 rounded-full"></div></div>
+                      <div class="fast-item opacity-0 flex items-center gap-3 p-2 bg-white rounded-xl border border-stone-100 shadow-[0_2px_4px_rgba(0,0,0,0.02)]"><div class="w-8 h-8 bg-[#f0f4f8] rounded-lg border border-stone-200 flex items-center justify-center text-stone-400"><iconify-icon icon="solar:shield-check-linear" class="text-sm"></iconify-icon></div><div class="h-2 w-20 bg-stone-100 rounded-full"></div><div class="flex-1"></div><div class="h-2 w-12 bg-stone-100 rounded-full"></div></div>
+                      <div class="fast-item opacity-0 flex items-center gap-3 p-2 bg-white rounded-xl border border-stone-100 shadow-[0_2px_4px_rgba(0,0,0,0.02)]"><div class="w-8 h-8 bg-[#f0f4f8] rounded-lg border border-stone-200 flex items-center justify-center text-stone-400"><iconify-icon icon="solar:document-add-linear" class="text-sm"></iconify-icon></div><div class="h-2 w-28 bg-stone-100 rounded-full"></div><div class="flex-1"></div><div class="h-2 w-8 bg-stone-100 rounded-full"></div></div>
+                      <div class="fast-item opacity-0 flex items-center gap-3 p-2 bg-white rounded-xl border border-stone-100 shadow-[0_2px_4px_rgba(0,0,0,0.02)]"><div class="w-8 h-8 bg-[#f0f4f8] rounded-lg border border-stone-200 flex items-center justify-center text-stone-400"><iconify-icon icon="solar:pen-new-square-linear" class="text-sm"></iconify-icon></div><div class="h-2 w-24 bg-stone-100 rounded-full"></div><div class="flex-1"></div><div class="h-2 w-10 bg-stone-100 rounded-full"></div></div>
+                      <div class="fast-item opacity-0 flex items-center gap-3 p-2 bg-white rounded-xl border border-stone-100 shadow-[0_2px_4px_rgba(0,0,0,0.02)]"><div class="w-8 h-8 bg-[#f0f4f8] rounded-lg border border-stone-200 flex items-center justify-center text-stone-400"><iconify-icon icon="solar:stamp-linear" class="text-sm"></iconify-icon></div><div class="h-2 w-20 bg-stone-100 rounded-full"></div><div class="flex-1"></div><div class="h-2 w-8 bg-stone-100 rounded-full"></div></div>
                     </div>
 
                     <div class="checkout-anim-item opacity-0 flex gap-4 items-center p-3 rounded-2xl bg-white border border-stone-100 shadow-sm relative z-10" data-anim="summary">
-                      <div class="w-16 h-16 rounded-xl shrink-0 bg-[#FAFAFA] flex items-center justify-center text-[#827A71] border border-stone-200"><iconify-icon icon="solar:layers-linear" class="text-2xl"></iconify-icon></div>
+                      <div class="w-16 h-16 rounded-xl shrink-0 bg-[#FAFAFA] flex items-center justify-center text-[#043566] border border-stone-200"><iconify-icon icon="solar:layers-linear" class="text-2xl"></iconify-icon></div>
                       <div class="flex-1"><h4 class="font-normal text-stone-900 text-base tracking-tight"><span data-th>+ 8 เอกสารเพิ่มเติม</span><span data-en>+ 8 more filings</span></h4><p class="text-sm text-stone-500 mt-0.5 font-light">VAT / SSO / Certificate</p></div>
                       <div class="text-right"><p class="text-base font-normal text-stone-900 tracking-tight">฿ 17,000</p></div>
                     </div>
 
                     <div class="mt-8 relative pt-2 pb-2" id="milestones-container">
                       <div class="absolute left-6 top-4 bottom-8 w-px bg-stone-200">
-                        <div id="milestone-progress-line" class="w-full bg-[#827A71] h-0 origin-top"></div>
+                        <div id="milestone-progress-line" class="w-full bg-[#043566] h-0 origin-top"></div>
                       </div>
 
                       <div class="milestone pl-16 relative mb-12" id="m1">
@@ -498,16 +498,16 @@ html[lang="en"] [data-en] { display: inline; }
                                   <h4 class="font-normal text-stone-900 tracking-tight text-lg mt-1">฿ 25,000</h4>
                                 </div>
                                 <div class="text-right">
-                                  <p class="text-xs font-medium text-[#827A71] uppercase tracking-widest mb-1"><span data-th>รวมทุกอย่าง</span><span data-en>All-in</span></p>
+                                  <p class="text-xs font-medium text-[#043566] uppercase tracking-widest mb-1"><span data-th>รวมทุกอย่าง</span><span data-en>All-in</span></p>
                                   <div class="text-2xl font-normal text-stone-900 tracking-tight"><span data-th>ครบใน 7 วัน</span><span data-en>Done in 7 days</span></div>
                                 </div>
                               </div>
                               <div class="flex flex-col gap-2">
-                                <div class="flex items-center gap-2 text-sm text-stone-600"><iconify-icon icon="solar:check-circle-bold" class="text-[#827A71]"></iconify-icon><span>DBD + Tax ID + VAT + SSO</span></div>
-                                <div class="flex items-center gap-2 text-sm text-stone-600"><iconify-icon icon="solar:check-circle-bold" class="text-[#827A71]"></iconify-icon><span data-th>จัดเตรียม MoA และตราประทับ</span><span data-en>MoA drafting + company seal</span></div>
-                                <div class="flex items-center gap-2 text-sm text-stone-600"><iconify-icon icon="solar:check-circle-bold" class="text-[#827A71]"></iconify-icon><span data-th>ที่ปรึกษา 1 ปีฟรี</span><span data-en>1-year free advisory</span></div>
+                                <div class="flex items-center gap-2 text-sm text-stone-600"><iconify-icon icon="solar:check-circle-bold" class="text-[#043566]"></iconify-icon><span>DBD + Tax ID + VAT + SSO</span></div>
+                                <div class="flex items-center gap-2 text-sm text-stone-600"><iconify-icon icon="solar:check-circle-bold" class="text-[#043566]"></iconify-icon><span data-th>จัดเตรียม MoA และตราประทับ</span><span data-en>MoA drafting + company seal</span></div>
+                                <div class="flex items-center gap-2 text-sm text-stone-600"><iconify-icon icon="solar:check-circle-bold" class="text-[#043566]"></iconify-icon><span data-th>ที่ปรึกษา 1 ปีฟรี</span><span data-en>1-year free advisory</span></div>
                               </div>
-                              <a href="https://wa.me/66829595750" target="_blank" class="w-full bg-[#817872] text-white py-3.5 rounded-xl font-normal tracking-widest uppercase text-sm hover:bg-stone-800 transition-all flex items-center justify-center gap-2 shadow-[0_4px_12px_rgba(129,120,114,0.3)] hover:shadow-[0_6px_16px_rgba(28,25,23,0.4)] transform hover:-translate-y-0.5 duration-300 group">
+                              <a href="https://wa.me/66829595750" target="_blank" class="w-full bg-[#043566] text-white py-3.5 rounded-xl font-normal tracking-widest uppercase text-sm hover:bg-stone-800 transition-all flex items-center justify-center gap-2 shadow-[0_4px_12px_rgba(129,120,114,0.3)] hover:shadow-[0_6px_16px_rgba(28,25,23,0.4)] transform hover:-translate-y-0.5 duration-300 group">
                                 <span data-th>เริ่มต้นเลย</span><span data-en>Get Started</span>
                                 <iconify-icon icon="solar:arrow-right-linear" class="text-lg group-hover:translate-x-1 transition-transform"></iconify-icon>
                               </a>
@@ -520,7 +520,7 @@ html[lang="en"] [data-en] { display: inline; }
                   <div id="bottom-gradient" class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-white/95 to-transparent pointer-events-none z-20 transition-opacity duration-300 ease-out"></div>
                 </div>
               </div>
-              <div class="absolute -bottom-10 -left-10 w-full h-full bg-[#E7E5E4]/60 rounded-[2rem] -z-10 transform -rotate-3 blur-2xl"></div>
+              <div class="absolute -bottom-10 -left-10 w-full h-full bg-[#dfe7f0]/60 rounded-[2rem] -z-10 transform -rotate-3 blur-2xl"></div>
             </div>
           </div>
         </div>
@@ -531,18 +531,18 @@ html[lang="en"] [data-en] { display: inline; }
     <section id="faq" class="relative py-24 lg:py-32 bg-[#FAFAFA] border-t border-stone-200 overflow-hidden">
       <div class="max-w-7xl mx-auto px-6 relative z-10 text-center mb-16 lg:mb-24">
         <div class="inline-flex items-center justify-center gap-3 mb-6">
-          <div class="w-7 h-7 rounded-full border border-[#8F877C] flex items-center justify-center text-[#8F877C]"><span class="text-sm font-light mt-0.5">?</span></div>
-          <span class="uppercase text-xs font-medium tracking-[0.2em] text-[#8F877C] font-montserrat"><span data-th>คำถามที่พบบ่อย</span><span data-en>FAQ</span></span>
+          <div class="w-7 h-7 rounded-full border border-[#3a6ea5] flex items-center justify-center text-[#3a6ea5]"><span class="text-sm font-light mt-0.5">?</span></div>
+          <span class="uppercase text-xs font-medium tracking-[0.2em] text-[#3a6ea5] font-montserrat"><span data-th>คำถามที่พบบ่อย</span><span data-en>FAQ</span></span>
         </div>
 
         <h2 class="text-6xl lg:text-7xl font-normal tracking-tight mb-8">
-          <span class="text-[#2C2B29] font-playfair" data-th>คำถามที่ </span>
-          <span class="text-[#2C2B29] font-playfair" data-en>Frequently Asked </span>
-          <span class="font-instrument-serif italic text-[#8F877C]" data-th>พบบ่อย</span>
-          <span class="font-instrument-serif italic text-[#8F877C]" data-en>Questions</span>
+          <span class="text-[#0a1628] font-playfair" data-th>คำถามที่ </span>
+          <span class="text-[#0a1628] font-playfair" data-en>Frequently Asked </span>
+          <span class="font-instrument-serif italic text-[#3a6ea5]" data-th>พบบ่อย</span>
+          <span class="font-instrument-serif italic text-[#3a6ea5]" data-en>Questions</span>
         </h2>
 
-        <p class="text-xl text-[#827A71] font-montserrat font-light max-w-3xl mx-auto leading-relaxed">
+        <p class="text-xl text-[#043566] font-montserrat font-light max-w-3xl mx-auto leading-relaxed">
           <span data-th>คำถามที่ลูกค้าถามบ่อยที่สุด — เราตั้งใจตอบทุกเรื่อง ตั้งแต่ราคา ขั้นตอน ไปจนถึงเอกสารที่ต้องเตรียม</span>
           <span data-en>Everything clients ask us most — from pricing and timelines to the documents you'll need.</span>
         </p>
@@ -550,17 +550,17 @@ html[lang="en"] [data-en] { display: inline; }
 
       <div class="faq-scene relative w-full max-w-6xl mx-auto h-[480px] sm:h-[550px] flex items-center justify-center">
 
-        <button id="faq-prev" class="absolute left-2 sm:left-10 z-50 w-12 h-12 bg-white/80 backdrop-blur-md rounded-full border border-stone-200 flex items-center justify-center text-stone-600 hover:text-stone-900 hover:bg-white transition-all shadow-md focus:outline-none focus:ring-2 focus:ring-[#827A71]/50"><iconify-icon icon="solar:arrow-left-linear" class="text-2xl"></iconify-icon></button>
-        <button id="faq-next" class="absolute right-2 sm:right-10 z-50 w-12 h-12 bg-white/80 backdrop-blur-md rounded-full border border-stone-200 flex items-center justify-center text-stone-600 hover:text-stone-900 hover:bg-white transition-all shadow-md focus:outline-none focus:ring-2 focus:ring-[#827A71]/50"><iconify-icon icon="solar:arrow-right-linear" class="text-2xl"></iconify-icon></button>
+        <button id="faq-prev" class="absolute left-2 sm:left-10 z-50 w-12 h-12 bg-white/80 backdrop-blur-md rounded-full border border-stone-200 flex items-center justify-center text-stone-600 hover:text-stone-900 hover:bg-white transition-all shadow-md focus:outline-none focus:ring-2 focus:ring-[#043566]/50"><iconify-icon icon="solar:arrow-left-linear" class="text-2xl"></iconify-icon></button>
+        <button id="faq-next" class="absolute right-2 sm:right-10 z-50 w-12 h-12 bg-white/80 backdrop-blur-md rounded-full border border-stone-200 flex items-center justify-center text-stone-600 hover:text-stone-900 hover:bg-white transition-all shadow-md focus:outline-none focus:ring-2 focus:ring-[#043566]/50"><iconify-icon icon="solar:arrow-right-linear" class="text-2xl"></iconify-icon></button>
 
         <div id="faq-carousel" class="faq-carousel w-[280px] sm:w-[360px] h-[400px] sm:h-[480px] relative z-20">
 
           <div class="faq-card-wrapper group is-active">
             <div class="faq-card-inner">
               <div class="faq-card-front bg-white/60 backdrop-blur-xl border border-stone-200 rounded-3xl shadow-[0_8px_32px_rgba(0,0,0,0.05)] flex flex-col items-center justify-center p-8 text-center pulse-glow-wheel">
-                <iconify-icon icon="solar:tag-price-linear" class="text-4xl text-[#C1B6A9] mb-6"></iconify-icon>
-                <h3 class="text-2xl sm:text-3xl font-playfair text-[#2C2B29] leading-snug"><span data-th>ค่าบริการคิดอย่างไร?</span><span data-en>How is pricing determined?</span></h3>
-                <div class="absolute bottom-6 text-xs text-[#827A71] font-montserrat tracking-widest uppercase flex items-center gap-2"><span data-th>แตะเพื่อดูคำตอบ</span><span data-en>Tap to reveal</span><iconify-icon icon="solar:refresh-linear" class="text-sm"></iconify-icon></div>
+                <iconify-icon icon="solar:tag-price-linear" class="text-4xl text-[#6b8eb8] mb-6"></iconify-icon>
+                <h3 class="text-2xl sm:text-3xl font-playfair text-[#0a1628] leading-snug"><span data-th>ค่าบริการคิดอย่างไร?</span><span data-en>How is pricing determined?</span></h3>
+                <div class="absolute bottom-6 text-xs text-[#043566] font-montserrat tracking-widest uppercase flex items-center gap-2"><span data-th>แตะเพื่อดูคำตอบ</span><span data-en>Tap to reveal</span><iconify-icon icon="solar:refresh-linear" class="text-sm"></iconify-icon></div>
               </div>
               <div class="faq-card-back bg-stone-900 rounded-3xl overflow-hidden shadow-2xl flex flex-col justify-end">
                 <img src="https://images.unsplash.com/photo-1554224155-1696413565d3?w=800&q=80" class="absolute inset-0 w-full h-full object-cover z-0" alt="Pricing">
@@ -581,9 +581,9 @@ html[lang="en"] [data-en] { display: inline; }
           <div class="faq-card-wrapper group">
             <div class="faq-card-inner">
               <div class="faq-card-front bg-white/60 backdrop-blur-xl border border-stone-200 rounded-3xl shadow-[0_8px_32px_rgba(0,0,0,0.05)] flex flex-col items-center justify-center p-8 text-center pulse-glow-wheel">
-                <iconify-icon icon="solar:calendar-date-linear" class="text-4xl text-[#C1B6A9] mb-6"></iconify-icon>
-                <h3 class="text-2xl sm:text-3xl font-playfair text-[#2C2B29] leading-snug"><span data-th>ใช้เวลานานแค่ไหน?</span><span data-en>How long does it take?</span></h3>
-                <div class="absolute bottom-6 text-xs text-[#827A71] font-montserrat tracking-widest uppercase flex items-center gap-2"><span data-th>แตะเพื่อดูคำตอบ</span><span data-en>Tap to reveal</span><iconify-icon icon="solar:refresh-linear" class="text-sm"></iconify-icon></div>
+                <iconify-icon icon="solar:calendar-date-linear" class="text-4xl text-[#6b8eb8] mb-6"></iconify-icon>
+                <h3 class="text-2xl sm:text-3xl font-playfair text-[#0a1628] leading-snug"><span data-th>ใช้เวลานานแค่ไหน?</span><span data-en>How long does it take?</span></h3>
+                <div class="absolute bottom-6 text-xs text-[#043566] font-montserrat tracking-widest uppercase flex items-center gap-2"><span data-th>แตะเพื่อดูคำตอบ</span><span data-en>Tap to reveal</span><iconify-icon icon="solar:refresh-linear" class="text-sm"></iconify-icon></div>
               </div>
               <div class="faq-card-back bg-stone-900 rounded-3xl overflow-hidden shadow-2xl flex flex-col justify-end">
                 <img src="https://images.unsplash.com/photo-1501139083538-0139583c060f?w=800&q=80" class="absolute inset-0 w-full h-full object-cover z-0" alt="Timeline">
@@ -604,9 +604,9 @@ html[lang="en"] [data-en] { display: inline; }
           <div class="faq-card-wrapper group">
             <div class="faq-card-inner">
               <div class="faq-card-front bg-white/60 backdrop-blur-xl border border-stone-200 rounded-3xl shadow-[0_8px_32px_rgba(0,0,0,0.05)] flex flex-col items-center justify-center p-8 text-center pulse-glow-wheel">
-                <iconify-icon icon="solar:global-linear" class="text-4xl text-[#C1B6A9] mb-6"></iconify-icon>
-                <h3 class="text-2xl sm:text-3xl font-playfair text-[#2C2B29] leading-snug"><span data-th>ต่างชาติเปิดบริษัทได้ไหม?</span><span data-en>Can foreigners own a company?</span></h3>
-                <div class="absolute bottom-6 text-xs text-[#827A71] font-montserrat tracking-widest uppercase flex items-center gap-2"><span data-th>แตะเพื่อดูคำตอบ</span><span data-en>Tap to reveal</span><iconify-icon icon="solar:refresh-linear" class="text-sm"></iconify-icon></div>
+                <iconify-icon icon="solar:global-linear" class="text-4xl text-[#6b8eb8] mb-6"></iconify-icon>
+                <h3 class="text-2xl sm:text-3xl font-playfair text-[#0a1628] leading-snug"><span data-th>ต่างชาติเปิดบริษัทได้ไหม?</span><span data-en>Can foreigners own a company?</span></h3>
+                <div class="absolute bottom-6 text-xs text-[#043566] font-montserrat tracking-widest uppercase flex items-center gap-2"><span data-th>แตะเพื่อดูคำตอบ</span><span data-en>Tap to reveal</span><iconify-icon icon="solar:refresh-linear" class="text-sm"></iconify-icon></div>
               </div>
               <div class="faq-card-back bg-stone-900 rounded-3xl overflow-hidden shadow-2xl flex flex-col justify-end">
                 <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80" class="absolute inset-0 w-full h-full object-cover z-0" alt="Foreign ownership">
@@ -627,7 +627,7 @@ html[lang="en"] [data-en] { display: inline; }
         </div>
       </div>
 
-      <div class="text-center mt-12 text-[#827A71] font-montserrat text-sm tracking-widest uppercase flex items-center justify-center gap-2 lg:hidden">
+      <div class="text-center mt-12 text-[#043566] font-montserrat text-sm tracking-widest uppercase flex items-center justify-center gap-2 lg:hidden">
         <iconify-icon icon="solar:hand-swipe-linear" class="text-lg"></iconify-icon>
         <span data-th>ปัดเพื่อเปลี่ยน</span><span data-en>Swipe to rotate</span>
       </div>
@@ -638,12 +638,12 @@ html[lang="en"] [data-en] { display: inline; }
       <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
 
         <h2 id="cta-heading" class="lg:text-7xl xl:text-8xl leading-[1.05] text-5xl tracking-tight mb-12 flex flex-col font-normal items-center text-center w-full">
-          <span class="cta-bounce-enter block text-[#2C2B29] font-playfair" data-th>ปรึกษาฟรี.</span>
-          <span class="cta-bounce-enter block text-[#2C2B29] font-playfair" data-en>Free consult.</span>
-          <span class="cta-bounce-enter block font-playfair text-[#8F877C]" data-th>วางแผนชัดเจน.</span>
-          <span class="cta-bounce-enter block font-playfair text-[#8F877C]" data-en>Clear plan.</span>
-          <span class="cta-bounce-enter block font-playfair italic text-[#C8C2B7]" data-th>NB ดูแลที่เหลือ.</span>
-          <span class="cta-bounce-enter block font-playfair italic text-[#C8C2B7]" data-en>NB handles the rest.</span>
+          <span class="cta-bounce-enter block text-[#0a1628] font-playfair" data-th>ปรึกษาฟรี.</span>
+          <span class="cta-bounce-enter block text-[#0a1628] font-playfair" data-en>Free consult.</span>
+          <span class="cta-bounce-enter block font-playfair text-[#3a6ea5]" data-th>วางแผนชัดเจน.</span>
+          <span class="cta-bounce-enter block font-playfair text-[#3a6ea5]" data-en>Clear plan.</span>
+          <span class="cta-bounce-enter block font-playfair italic text-[#89a4c7]" data-th>NB ดูแลที่เหลือ.</span>
+          <span class="cta-bounce-enter block font-playfair italic text-[#89a4c7]" data-en>NB handles the rest.</span>
         </h2>
 
         <p class="text-2xl text-stone-500 max-w-2xl mx-auto mb-12 font-light">
@@ -652,7 +652,7 @@ html[lang="en"] [data-en] { display: inline; }
         </p>
 
         <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-          <a href="https://wa.me/66829595750" target="_blank" class="sm:w-auto hover:bg-stone-800 transition-colors flex btn-pulse text-xl font-normal text-white bg-[#817872] w-full rounded-full pt-4 pr-8 pb-4 pl-8 relative gap-2 items-center justify-center">
+          <a href="https://wa.me/66829595750" target="_blank" class="sm:w-auto hover:bg-stone-800 transition-colors flex btn-pulse text-xl font-normal text-white bg-[#043566] w-full rounded-full pt-4 pr-8 pb-4 pl-8 relative gap-2 items-center justify-center">
             <iconify-icon icon="ri:whatsapp-fill" class="text-xl"></iconify-icon>
             WhatsApp · +66 82 959 5750
           </a>
@@ -676,8 +676,8 @@ html[lang="en"] [data-en] { display: inline; }
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
         <div class="col-span-2 md:col-span-1">
           <div class="flex items-center gap-1 mb-6">
-            <span class="text-[#C1B6A9] font-extralight tracking-widest text-xl uppercase">NB</span>
-            <span class="text-[#827A71] font-normal text-xl tracking-tight ml-1">Accounting</span>
+            <span class="text-[#6b8eb8] font-extralight tracking-widest text-xl uppercase">NB</span>
+            <span class="text-[#043566] font-normal text-xl tracking-tight ml-1">Accounting</span>
           </div>
           <p class="text-lg text-stone-500 max-w-xs font-light">
             <span data-th>บัญชี · วีซ่า · Work Permit ครบจบที่เดียว</span>
