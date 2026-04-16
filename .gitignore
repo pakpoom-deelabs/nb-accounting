@@ -54,3 +54,4 @@ temp/
 _internal/
 _drafts/
 *.draft.*
+.vercel
