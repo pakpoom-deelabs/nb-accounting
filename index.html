@@ -176,11 +176,52 @@ body .bg-stone-200 { background-color: rgba(255,255,255,.11) !important; }
 body .bg-stone-900 { background-color: #010f20 !important; }
 body .bg-stone-800 { background-color: #0a2540 !important; }
 
-/* Brand navy backgrounds — differentiate from page */
-body .bg-\[\#043566\] { background-color: var(--surface-deep) !important; }
+/* Brand navy backgrounds — CTAs lifted to stand out from page bg */
+body .bg-\[\#043566\] {
+  background-color: var(--surface-1) !important;
+  box-shadow: 0 0 0 1px rgba(125,177,232,0.22), 0 12px 32px -10px rgba(0,0,0,0.45);
+}
+body .bg-\[\#043566\]:hover { background-color: var(--surface-2) !important; }
+body .hover\:bg-\[\#032649\]:hover { background-color: #042a56 !important; }
 body .bg-\[\#032649\] { background-color: #010f20 !important; }
 body .bg-\[\#0a1628\] { background-color: #010a18 !important; }
+body .bg-\[\#0a1628\]\/30 { background-color: rgba(4, 12, 24, 0.55) !important; }
+body .bg-\[\#0a1628\]\/40 { background-color: rgba(4, 12, 24, 0.65) !important; }
 body .bg-\[\#f0f4f8\] { background-color: rgba(255,255,255,.08) !important; }
+body .bg-\[\#dfe7f0\]\/60 { background-color: rgba(125,177,232,0.18) !important; }
+
+/* Playfair headline accents + brand-dark text tokens → lift to white on navy */
+body .text-\[\#0a1628\] { color: var(--ink-primary) !important; }
+body .text-\[\#3a6ea5\] { color: #9ec4f0 !important; }
+body .text-\[\#6b8eb8\] { color: #a5c5ea !important; }
+body .text-\[\#89a4c7\] { color: #b4cdea !important; }
+
+/* Stone-200 used as SVG strokes and thin lines — too faint on navy */
+body .text-stone-200 { color: rgba(255, 255, 255, 0.18) !important; }
+body .text-stone-300 { color: var(--ink-secondary) !important; }
+
+/* Hover variants: stone-* */
+body .hover\:text-stone-900:hover { color: var(--ink-primary) !important; }
+body .hover\:text-stone-800:hover { color: var(--ink-primary) !important; }
+body .hover\:bg-stone-50:hover  { background-color: rgba(255,255,255,.08) !important; }
+body .hover\:bg-stone-100:hover { background-color: rgba(255,255,255,.12) !important; }
+body .hover\:bg-stone-800:hover { background-color: #0a2540 !important; }
+body .hover\:bg-white:hover { background-color: var(--surface-2) !important; }
+body .hover\:border-stone-200:hover { border-color: var(--border-soft) !important; }
+
+/* Arbitrary card shadows (low-alpha black) → stronger, darker shadows on navy */
+body [class*="shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)]"] {
+  box-shadow: 0 20px 40px -15px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.05) !important;
+}
+body [class*="shadow-[0_24px_48px_-12px_rgba(0,0,0,0.4)]"] {
+  box-shadow: 0 24px 48px -12px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.05) !important;
+}
+body [class*="shadow-[0_8px_32px_rgba(0,0,0,0.05)]"] {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05) !important;
+}
+body [class*="shadow-[0_0_40px_rgba(0,0,0,0.3)]"] {
+  box-shadow: 0 0 40px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.05) !important;
+}
 
 /* Text tokens */
 body .text-stone-900 { color: var(--ink-primary) !important; }
@@ -314,7 +355,7 @@ body .trust-marquee-container { background-color: var(--surface-1) !important; }
       </div>
 
       <div class="flex-1 w-full max-w-lg lg:max-w-none relative aspect-square lg:aspect-[4/3] flex items-center justify-center">
-        <div class="absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,black,transparent_70%)]" style="background-image: linear-gradient(to right, rgba(231, 229, 228, 0.4) 1px, transparent 1px), linear-gradient(to bottom, rgba(231, 229, 228, 0.4) 1px, transparent 1px); background-size: 4rem 4rem;"></div>
+        <div class="absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,black,transparent_70%)]" style="background-image: linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px); background-size: 4rem 4rem;"></div>
 
         <div id="svg-wrapper" class="relative w-full h-full flex items-center justify-center cursor-crosshair">
           <svg viewBox="0 0 400 400" class="w-[120%] h-[120%] lg:w-[140%] lg:h-[140%] text-stone-200 drop-shadow-sm" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">
