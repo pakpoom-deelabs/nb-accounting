@@ -6,7 +6,7 @@ try{if(window.parent&&window.parent!==window){window.parent.promotekit_referral=
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#043566">
+<meta name="theme-color" content="#032649">
 <title>NB Accounting — Accounting, Visa & Work Permit Services Thailand</title>
 <meta name="description" content="NB Accounting Visa Services — รับทำบัญชี ที่ปรึกษาภาษี จดทะเบียนบริษัท วีซ่า ใบอนุญาตทำงาน และรายงานธุรกิจเฉพาะทาง (กัญชา, แลกเปลี่ยนเงินตรา). โทร 097-0081294 / 082-9595750">
 <meta name="keywords" content="accounting thailand, รับทำบัญชี, thai visa services, work permit thailand, ที่ปรึกษาภาษี, จดทะเบียนบริษัท, cannabis accounting thailand, money exchange reporting, NB Accounting">
@@ -88,7 +88,80 @@ try{if(window.parent&&window.parent!==window){window.parent.promotekit_referral=
     --brand-dark: #032649;
     --brand-light: #e6ebf2;
     --brand-tint: #f0f4f8;
+    --page-bg: #043566;
+    --surface-1: #075093;   /* elevated card on navy page */
+    --surface-2: #0a5ea8;   /* secondary elevated */
+    --surface-deep: #021a33;/* deepest for emphasis */
+    --ink-primary: #ffffff;
+    --ink-secondary: #cbd5e1;
+    --ink-muted: #94a3b8;
+    --accent-light: #7db1e8;/* brand-tinted accent that reads on navy */
+    --border-soft: rgba(255,255,255,.10);
+    --border-firm: rgba(255,255,255,.18);
   }
+
+  /* ═════ Dark-bg theme overrides (page bg = #043566) ═════ */
+  html, body { background: var(--page-bg); }
+  body { color: var(--ink-primary); }
+
+  /* Surfaces: cards & chips rewritten for contrast on navy */
+  body .bg-white { background-color: var(--surface-1) !important; color: var(--ink-primary); }
+  body .bg-neutral-50  { background-color: rgba(255,255,255,.05) !important; color: var(--ink-primary); }
+  body .bg-neutral-100 { background-color: rgba(255,255,255,.08) !important; color: var(--ink-primary); }
+  body .bg-neutral-200 { background-color: rgba(255,255,255,.12) !important; }
+  body .bg-\[\#e6ebf2\] { background-color: rgba(255,255,255,.10) !important; }
+  body .bg-\[\#f0f4f8\] { background-color: rgba(255,255,255,.06) !important; }
+  body .bg-neutral-700,
+  body .bg-neutral-800 { background-color: #0a2540 !important; }
+
+  /* The deep navy card (hero, contact, dark pricing) needs to differentiate from page bg */
+  body .bg-\[\#043566\] { background-color: var(--surface-deep) !important; }
+  body .bg-\[\#032649\] { background-color: #010f20 !important; }
+  body .bg-\[\#0a1628\] { background-color: #010a18 !important; }
+
+  /* Text colors inverted */
+  body .text-neutral-400 { color: var(--ink-muted) !important; }
+  body .text-neutral-500,
+  body .text-neutral-600 { color: var(--ink-secondary) !important; }
+  body .text-neutral-700 { color: #e2e8f0 !important; }
+  body .text-neutral-800,
+  body .text-neutral-900 { color: var(--ink-primary) !important; }
+
+  /* Brand accent text — on dark surfaces use a lighter brand tint */
+  body .text-\[\#043566\],
+  body .hover\:text-\[\#043566\]:hover,
+  body .group-hover\:text-\[\#043566\]:hover { color: var(--accent-light) !important; }
+  body .border-\[\#043566\],
+  body .hover\:border-\[\#043566\]:hover { border-color: var(--accent-light) !important; }
+  /* Icon-hover fills: keep navy brand on lighter chip */
+  body .group-hover\:bg-\[\#043566\]:hover { background-color: var(--accent-light) !important; }
+
+  /* Borders — swap dark borders to light translucent */
+  body .border-neutral-100,
+  body .border-neutral-200,
+  body .border-neutral-200\/60 { border-color: var(--border-soft) !important; }
+  body .border-neutral-300 { border-color: var(--border-firm) !important; }
+  body .border-neutral-800 { border-color: var(--border-firm) !important; }
+  body .border-black\/\[0\.04\] { border-color: var(--border-soft) !important; }
+
+  /* Nav glass → dark glass */
+  .glass {
+    background: rgba(3, 38, 73, 0.78) !important;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom-color: var(--border-soft) !important;
+  }
+
+  /* Scrollbar thumb for dark page */
+  ::-webkit-scrollbar-thumb { background: rgba(255,255,255,.15); }
+  ::-webkit-scrollbar-thumb:hover { background: var(--accent-light); }
+
+  /* Icon small bg-white circles inside dark pricing card stay white-tinted */
+  body .bg-\[\#0a1628\] .bg-white\/10 { background-color: rgba(255,255,255,.10) !important; }
+
+  /* Selection */
+  body::selection { background: var(--accent-light); color: #021a33; }
+  body *::selection { background: var(--accent-light); color: #021a33; }
   html[lang="th"] body { font-family: 'IBM Plex Sans Thai', 'Plus Jakarta Sans', sans-serif; }
   html[lang="en"] body { font-family: 'Plus Jakarta Sans', sans-serif; }
   body { font-family: 'IBM Plex Sans Thai', 'Plus Jakarta Sans', sans-serif; }
@@ -271,7 +344,7 @@ try{if(window.parent&&window.parent!==window){window.parent.promotekit_referral=
   }
 </style>
 </head>
-<body class="bg-white text-neutral-900 antialiased selection:bg-[#043566] selection:text-white">
+<body class="bg-[#043566] text-white antialiased selection:bg-[#7db1e8] selection:text-[#021a33]">
 
 <!-- Scroll progress bar -->
 <div id="scroll-progress"></div>
