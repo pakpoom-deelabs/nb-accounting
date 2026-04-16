@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NB Accounting | บัญชี · วีซ่า · Work Permit ครบจบในที่เดียว</title>
 <meta name="description" content="สำนักงานบัญชีครบวงจร 10+ ปี ประสบการณ์ รับทำบัญชี ที่ปรึกษาภาษี วีซ่า ใบอนุญาตทำงาน จดทะเบียนบริษัท รายงานธุรกิจเฉพาะทาง (กัญชา, แลกเปลี่ยนเงินตรา)">
-<meta name="theme-color" content="#043566">
+<meta name="theme-color" content="#032649">
 <link rel="icon" type="image/jpeg" href="images/logo.jpg">
 <link rel="apple-touch-icon" href="images/logo.jpg">
 
@@ -136,9 +136,111 @@ html[lang="en"] [data-en] { display: inline; }
 
 .hide-scrollbar::-webkit-scrollbar { display: none; }
 .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* ═════ Dark-navy background override (Casa Flow dark) ═════ */
+:root {
+  --page-bg: #043566;
+  --surface-1: #0a4780;     /* elevated card */
+  --surface-2: #0d5496;     /* secondary elevated */
+  --surface-deep: #021a33;  /* deepest emphasis */
+  --ink-primary: #f5f5f4;   /* near-white (warm to match Playfair) */
+  --ink-secondary: #d6d3d1; /* stone-300 equivalent */
+  --ink-muted: #a8a29e;     /* stone-400 equivalent */
+  --ink-faint: #78716c;     /* stone-500 */
+  --accent-light: #7db1e8;  /* brand-tinted accent readable on navy */
+  --border-soft: rgba(255,255,255,.10);
+  --border-firm: rgba(255,255,255,.18);
+}
+html, body { background: var(--page-bg); }
+body { color: var(--ink-secondary); }
+
+/* Page-wide bg swaps */
+body .bg-\[\#FAFAFA\],
+body .bg-\[\#fafafa\] { background-color: var(--page-bg) !important; }
+body .bg-\[\#FAFAFA\]\/80,
+body .bg-\[\#fafafa\]\/80 { background-color: rgba(3, 38, 73, 0.82) !important; }
+
+/* Surfaces (cards, chips) */
+body .bg-white { background-color: var(--surface-1) !important; color: var(--ink-primary); }
+body .bg-white\/30 { background-color: rgba(255,255,255,.06) !important; }
+body .bg-white\/50 { background-color: rgba(255,255,255,.08) !important; }
+body .bg-white\/60 { background-color: rgba(255,255,255,.10) !important; }
+body .bg-white\/70 { background-color: rgba(255,255,255,.12) !important; }
+body .bg-white\/80 { background-color: rgba(10, 71, 128, 0.78) !important; }
+body .bg-white\/90 { background-color: rgba(10, 71, 128, 0.92) !important; }
+
+/* Stone neutrals → translucent whites */
+body .bg-stone-50  { background-color: rgba(255,255,255,.04) !important; }
+body .bg-stone-100 { background-color: rgba(255,255,255,.07) !important; }
+body .bg-stone-200 { background-color: rgba(255,255,255,.11) !important; }
+body .bg-stone-900 { background-color: #010f20 !important; }
+body .bg-stone-800 { background-color: #0a2540 !important; }
+
+/* Brand navy backgrounds — differentiate from page */
+body .bg-\[\#043566\] { background-color: var(--surface-deep) !important; }
+body .bg-\[\#032649\] { background-color: #010f20 !important; }
+body .bg-\[\#0a1628\] { background-color: #010a18 !important; }
+body .bg-\[\#f0f4f8\] { background-color: rgba(255,255,255,.08) !important; }
+
+/* Text tokens */
+body .text-stone-900 { color: var(--ink-primary) !important; }
+body .text-stone-800 { color: var(--ink-primary) !important; }
+body .text-stone-700 { color: #e7e5e4 !important; }
+body .text-stone-600 { color: var(--ink-secondary) !important; }
+body .text-stone-500 { color: var(--ink-muted) !important; }
+body .text-stone-400 { color: var(--ink-muted) !important; }
+body .text-neutral-900,
+body .text-neutral-800 { color: var(--ink-primary) !important; }
+body .text-neutral-700 { color: #e7e5e4 !important; }
+body .text-neutral-600,
+body .text-neutral-500 { color: var(--ink-secondary) !important; }
+body .text-neutral-400 { color: var(--ink-muted) !important; }
+
+/* Brand accent on dark surfaces — lift to a lighter tint for visibility */
+body .text-\[\#043566\],
+body .hover\:text-\[\#043566\]:hover,
+body .group-hover\:text-\[\#043566\]:hover { color: var(--accent-light) !important; }
+body .border-\[\#043566\],
+body .hover\:border-\[\#043566\]:hover,
+body .group-hover\:border-\[\#043566\]\/40:hover { border-color: var(--accent-light) !important; }
+body .ring-\[\#043566\]\/40 { --tw-ring-color: rgba(125,177,232,.4) !important; }
+
+/* Borders */
+body .border-stone-100,
+body .border-stone-200,
+body .border-stone-200\/50,
+body .border-stone-200\/60 { border-color: var(--border-soft) !important; }
+body .border-stone-300 { border-color: var(--border-firm) !important; }
+body .border-neutral-100,
+body .border-neutral-200,
+body .border-neutral-200\/60 { border-color: var(--border-soft) !important; }
+body .border-y.border-stone-200 { border-top-color: var(--border-soft) !important; border-bottom-color: var(--border-soft) !important; }
+
+/* Shadows — on dark bg use deeper black shadows, and invert the soft tints */
+body .shadow-sm { box-shadow: 0 1px 2px rgba(0,0,0,0.25) !important; }
+
+/* Ring colors for stone hover rings */
+body .ring-stone-200 { --tw-ring-color: var(--border-soft) !important; }
+body .group-hover\:ring-stone-200:hover { --tw-ring-color: var(--border-soft) !important; }
+
+/* Selection */
+body::selection,
+body *::selection { background: var(--accent-light); color: var(--surface-deep); }
+
+/* Trust marquee bg (bg-white full-strip) already covered; ensure its text reads */
+body .trust-marquee-container { background-color: var(--surface-1) !important; }
+
+/* The animated checkPop inside .fast-item etc keeps its #043566 — accent remap above keeps parity */
+
+/* Keyframes: update pulse shadows for dark bg */
+@keyframes pulseSoft {
+  0%   { box-shadow: 0 0 0 0 rgba(125, 177, 232, 0.55); transform: scale(1); }
+  70%  { box-shadow: 0 0 0 15px rgba(125, 177, 232, 0);   transform: scale(1.02); }
+  100% { box-shadow: 0 0 0 0 rgba(125, 177, 232, 0);      transform: scale(1); }
+}
 </style>
 </head>
-<body class="bg-[#FAFAFA] text-stone-600 text-xl font-light antialiased min-h-screen flex flex-col relative overflow-x-hidden scroll-smooth">
+<body class="bg-[#043566] text-stone-300 text-xl font-light antialiased min-h-screen flex flex-col relative overflow-x-hidden scroll-smooth">
 
   <!-- ============ NAV ============ -->
   <nav class="fixed top-0 w-full z-50 bg-[#FAFAFA]/80 backdrop-blur-md border-b border-stone-200/50">
