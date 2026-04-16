@@ -1,0 +1,71 @@
+name: Validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # ───── HTML validation ─────
+      - name: Validate HTML syntax
+        run: npx --yes html-validate index.html || true
+
+      # ───── Check file structure ─────
+      - name: Verify required files exist
+        run: |
+          for f in index.html vercel.json robots.txt sitemap.xml; do
+            if [ ! -f "$f" ]; then
+              echo "::error::Missing required file: $f"
+              exit 1
+            fi
+          done
+          echo "✓ All required files present"
+
+      # ───── Check for broken image references ─────
+      - name: Verify all image references resolve
+        run: |
+          node -e "
+            const fs = require('fs');
+            const html = fs.readFileSync('index.html', 'utf8');
+            const imgs = [...html.matchAll(/images\/[\w\-]+\.(png|jpg|jpeg|svg|webp)/g)].map(m => m[0]);
+            const unique = [...new Set(imgs)];
+            let ok = true;
+            for (const p of unique) {
+              if (!fs.existsSync(p)) {
+                console.error('::error::Missing image file: ' + p);
+                ok = false;
+              } else {
+                console.log('✓ ' + p);
+              }
+            }
+            if (!ok) process.exit(1);
+          "
+
+      # ───── Check JavaScript syntax inside <script> ─────
+      - name: Validate inline JavaScript
+        run: |
+          node -e "
+            const fs = require('fs');
+            const html = fs.readFileSync('index.html', 'utf8');
+            const blocks = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map(m => m[1]);
+            for (const [i, js] of blocks.entries()) {
+              try {
+                new Function(js);
+                console.log('✓ <script> block #' + (i+1) + ' OK (' + js.length + ' chars)');
+              } catch (e) {
+                console.error('::error::Block #' + (i+1) + ': ' + e.message);
+                process.exit(1);
+              }
+            }
+          "

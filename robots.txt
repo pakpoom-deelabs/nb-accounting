@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Block crawlers from accessing image originals and internal files
+Disallow: /_internal/
+Disallow: /_drafts/
+
+# Sitemap — update the domain to your production URL
+Sitemap: https://nbaccounting.com/sitemap.xml

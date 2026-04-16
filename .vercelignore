@@ -1,0 +1,37 @@
+# Vercel won't deploy anything listed here — keeps production bundle lean.
+
+# ─── Git / CI ───
+.git
+.gitignore
+.github
+.vercel
+
+# ─── OS junk ───
+.DS_Store
+Thumbs.db
+
+# ─── Dev tooling ───
+node_modules
+package-lock.json
+README.md
+
+# ─── Internal documents (not part of the public site) ───
+NB-Accounting-Website-Plan.md
+_internal/
+_drafts/
+*.draft.*
+
+# ─── Reference assets (not served to visitors) ───
+1213990737120922.*
+accounting-visa-35.html
+demo.html
+prototype-home.html
+
+# ─── Original JPEGs inside images/ (PNG versions are the ones used) ───
+images/README.md
+images/Customer Testimonial Avatars.jpeg
+images/Founder Portrait.jpeg
+images/Logo.jpeg
+images/Manager.jpeg
+images/Office Environment.jpeg
+images/Team Group Photo.jpeg

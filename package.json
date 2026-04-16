@@ -1,0 +1,29 @@
+{
+  "name": "nb-accounting-website",
+  "version": "0.1.0",
+  "private": true,
+  "description": "NB Accounting Visa Services — landing page (Accounting, Visa, Work Permit, Tax, Business Registration, Specialized Reporting)",
+  "scripts": {
+    "dev":     "npx --yes serve -l 3000 .",
+    "start":   "npx --yes serve -l 3000 .",
+    "format":  "npx --yes prettier --write \"**/*.{html,css,js,json,md}\"",
+    "validate":"npx --yes html-validate index.html",
+    "preview": "npx --yes serve . -p 5000"
+  },
+  "keywords": [
+    "accounting",
+    "thailand",
+    "visa",
+    "work-permit",
+    "bookkeeping",
+    "tax",
+    "cannabis-reporting",
+    "money-exchange-reporting",
+    "nb-accounting"
+  ],
+  "author": "NB Accounting Visa Services",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=18"
+  }
+}
