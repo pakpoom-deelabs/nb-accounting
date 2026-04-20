@@ -5,46 +5,12 @@
 
   <url>
     <loc>https://nbaccounting.com/</loc>
-    <lastmod>2026-04-16</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="th" href="https://nbaccounting.com/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nbaccounting.com/?lang=en"/>
-  </url>
-
-  <url>
-    <loc>https://nbaccounting.com/#services</loc>
-    <lastmod>2026-04-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://nbaccounting.com/#specialized</loc>
-    <lastmod>2026-04-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://nbaccounting.com/#about</loc>
-    <lastmod>2026-04-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://nbaccounting.com/#team</loc>
-    <lastmod>2026-04-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://nbaccounting.com/#contact</loc>
-    <lastmod>2026-04-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nbaccounting.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nbaccounting.com/"/>
   </url>
 
 </urlset>
