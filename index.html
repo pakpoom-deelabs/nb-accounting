@@ -1228,70 +1228,100 @@ try{if(window.parent&&window.parent!==window){window.parent.promotekit_referral=
 </main>
 
 <!-- ============ FOOTER ============ -->
-<footer class="bg-white border-t border-neutral-100 pt-16 pb-10">
+<footer id="visit" class="border-t border-white/10 pt-16 pb-10 text-white/70">
   <div class="max-w-7xl mx-auto px-6">
-    <div class="flex flex-col md:flex-row justify-between items-start gap-12 mb-16">
-      <div class="max-w-sm">
-        <div class="flex items-center gap-2 mb-4">
-          <img src="images/logo.jpg" alt="NB" class="w-8 h-8 rounded object-cover">
-          <span class="text-base font-bold tracking-tight">NB Accounting</span>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-9 gap-10 lg:gap-8 mb-14">
+      <!-- Col 1: brand + address -->
+      <div class="sm:col-span-2 lg:col-span-3">
+        <div class="flex items-center gap-2.5 mb-5">
+          <img src="images/logo.jpg" alt="NB" class="w-9 h-9 rounded-lg object-cover ring-1 ring-white/15">
+          <span class="text-base font-bold tracking-tight text-white">NB Accounting</span>
         </div>
-        <p class="text-sm text-neutral-500 mb-5">
+        <p class="text-sm leading-relaxed text-white/60 mb-6 max-w-xs">
           <span data-th>สำนักงานบัญชีครบวงจร — รับทำบัญชี ภาษี วีซ่า Work Permit และจดทะเบียนธุรกิจในประเทศไทย</span>
           <span data-en>Full-service accounting firm — Accounting, Tax, Visa, Work Permit, and Business Registration in Thailand.</span>
         </p>
-        <address class="not-italic text-sm text-neutral-500 space-y-2">
-          <div class="flex items-start gap-2">
-            <iconify-icon icon="solar:map-point-linear" class="text-[#043566] mt-0.5 shrink-0" width="16"></iconify-icon>
+        <address class="not-italic text-sm text-white/70 space-y-2.5">
+          <div class="flex items-start gap-2.5">
+            <iconify-icon icon="solar:map-point-linear" class="text-white/50 mt-0.5 shrink-0" width="16"></iconify-icon>
             <span>
               <span data-th>121/23 หมู่ที่ 1 ถ.วิชิตสงคราม<br>ต.กะทู้ อ.กะทู้ จ.ภูเก็ต 83120</span>
               <span data-en>121/23 Moo 1, Vichitsongkram Rd.<br>Kathu, Kathu, Phuket 83120</span>
             </span>
           </div>
-          <div class="flex items-center gap-2">
-            <iconify-icon icon="solar:phone-linear" class="text-[#043566] shrink-0" width="16"></iconify-icon>
-            <a href="tel:+66970081294" class="hover:text-[#043566] transition-colors">097-008-1294</a>
-            <span>·</span>
-            <a href="tel:+66829595750" class="hover:text-[#043566] transition-colors">082-959-5750</a>
+          <div class="flex items-center gap-2.5">
+            <iconify-icon icon="solar:phone-linear" class="text-white/50 shrink-0" width="16"></iconify-icon>
+            <a href="tel:+66970081294" class="hover:text-white transition-colors">097-008-1294</a>
+            <span class="text-white/30">·</span>
+            <a href="tel:+66829595750" class="hover:text-white transition-colors">082-959-5750</a>
           </div>
-          <div class="flex items-center gap-2">
+          <div class="flex items-center gap-2.5">
             <iconify-icon icon="ri:line-fill" class="text-[#00B900] shrink-0" width="16"></iconify-icon>
             <span>LINE ID: 0970081294</span>
           </div>
         </address>
       </div>
-      <div class="flex flex-wrap gap-8 md:gap-12">
-        <ul class="space-y-3 text-sm text-neutral-500">
-          <li class="font-semibold text-neutral-900" data-th>บริการ</li>
-          <li class="font-semibold text-neutral-900" data-en>Services</li>
-          <li><a href="#services" class="hover:text-[#043566] transition-colors"><span data-th>รับทำบัญชี</span><span data-en>Accounting</span></a></li>
-          <li><a href="#services" class="hover:text-[#043566] transition-colors"><span data-th>ที่ปรึกษาภาษี</span><span data-en>Tax</span></a></li>
-          <li><a href="#services" class="hover:text-[#043566] transition-colors"><span data-th>วีซ่า</span><span data-en>Visa</span></a></li>
-          <li><a href="#services" class="hover:text-[#043566] transition-colors"><span data-th>Work Permit</span><span data-en>Work Permit</span></a></li>
-        </ul>
-        <ul class="space-y-3 text-sm text-neutral-500">
-          <li class="font-semibold text-neutral-900" data-th>บริษัท</li>
-          <li class="font-semibold text-neutral-900" data-en>Company</li>
-          <li><a href="#about" class="hover:text-[#043566] transition-colors"><span data-th>เกี่ยวกับเรา</span><span data-en>About</span></a></li>
-          <li><a href="#why" class="hover:text-[#043566] transition-colors"><span data-th>ทำไมต้องเลือกเรา</span><span data-en>Why Us</span></a></li>
-          <li><a href="#contact" class="hover:text-[#043566] transition-colors"><span data-th>ติดต่อ</span><span data-en>Contact</span></a></li>
-        </ul>
-        <ul class="space-y-3 text-sm text-neutral-500">
-          <li class="font-semibold text-neutral-900" data-th>กฎหมาย</li>
-          <li class="font-semibold text-neutral-900" data-en>Legal</li>
-          <li><a href="#" class="hover:text-[#043566] transition-colors">Privacy Policy (PDPA)</a></li>
-          <li><a href="#" class="hover:text-[#043566] transition-colors">Terms of Service</a></li>
-          <li><a href="#" class="hover:text-[#043566] transition-colors">Cookie Policy</a></li>
-        </ul>
+
+      <!-- Col 2: Services -->
+      <ul class="space-y-3 text-sm text-white/60">
+        <li class="font-semibold text-white tracking-wide" data-th>บริการ</li>
+        <li class="font-semibold text-white tracking-wide" data-en>Services</li>
+        <li><a href="#services" class="hover:text-white transition-colors"><span data-th>รับทำบัญชี</span><span data-en>Accounting</span></a></li>
+        <li><a href="#services" class="hover:text-white transition-colors"><span data-th>ที่ปรึกษาภาษี</span><span data-en>Tax</span></a></li>
+        <li><a href="#services" class="hover:text-white transition-colors"><span data-th>วีซ่า</span><span data-en>Visa</span></a></li>
+        <li><a href="#services" class="hover:text-white transition-colors"><span data-th>Work Permit</span><span data-en>Work Permit</span></a></li>
+      </ul>
+
+      <!-- Col 3: Company -->
+      <ul class="space-y-3 text-sm text-white/60">
+        <li class="font-semibold text-white tracking-wide" data-th>บริษัท</li>
+        <li class="font-semibold text-white tracking-wide" data-en>Company</li>
+        <li><a href="#about" class="hover:text-white transition-colors"><span data-th>เกี่ยวกับเรา</span><span data-en>About</span></a></li>
+        <li><a href="#why" class="hover:text-white transition-colors"><span data-th>ทำไมต้องเลือกเรา</span><span data-en>Why Us</span></a></li>
+        <li><a href="#contact" class="hover:text-white transition-colors"><span data-th>ติดต่อ</span><span data-en>Contact</span></a></li>
+      </ul>
+
+      <!-- Col 4: Legal -->
+      <ul class="space-y-3 text-sm text-white/60">
+        <li class="font-semibold text-white tracking-wide" data-th>กฎหมาย</li>
+        <li class="font-semibold text-white tracking-wide" data-en>Legal</li>
+        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy (PDPA)</a></li>
+        <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+        <li><a href="#" class="hover:text-white transition-colors">Cookie Policy</a></li>
+      </ul>
+
+      <!-- Col 5: Map -->
+      <div class="flex flex-col lg:col-span-3">
+        <p class="font-semibold text-white tracking-wide text-sm mb-4" data-th>ที่ตั้ง</p>
+        <p class="font-semibold text-white tracking-wide text-sm mb-4" data-en>Location</p>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=121%2F23+Moo+1+Vichitsongkram+Rd+Kathu+Phuket+83120"
+           target="_blank" rel="noopener"
+           class="group relative block rounded-xl overflow-hidden ring-1 ring-white/10 hover:ring-white/30 transition-all aspect-[4/3] bg-[#0a1628]">
+          <iframe
+            src="https://maps.google.com/maps?q=121%2F23+Moo+1+Vichitsongkram+Rd+Kathu+Phuket+83120&hl=th&z=16&output=embed"
+            title="NB Accounting Visa Services — สำนักงานภูเก็ต / Phuket office location"
+            class="w-full h-full border-0 pointer-events-none"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+          <span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent px-3 py-2 text-xs font-medium text-white flex items-center justify-between opacity-0 group-hover:opacity-100 transition-opacity">
+            <span class="flex items-center gap-1">
+              <iconify-icon icon="solar:routing-linear" width="14"></iconify-icon>
+              <span data-th>นำทาง</span><span data-en>Get directions</span>
+            </span>
+            <iconify-icon icon="solar:arrow-right-up-linear" width="14"></iconify-icon>
+          </span>
+        </a>
       </div>
     </div>
 
-    <div class="border-t border-neutral-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-neutral-400 font-medium">
+    <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/50 font-medium">
       <p>© 2026 NB Accounting Visa Services. All rights reserved.</p>
-      <div class="flex gap-4">
-        <a href="https://wa.me/66829595750" target="_blank" class="hover:text-[#25D366] transition-colors flex items-center gap-1"><iconify-icon icon="ri:whatsapp-fill"></iconify-icon> WhatsApp</a>
-        <a href="https://line.me/R/ti/p/~0970081294" target="_blank" class="hover:text-[#00B900] transition-colors flex items-center gap-1"><iconify-icon icon="ri:line-fill"></iconify-icon> LINE</a>
-        <a href="tel:+66970081294" class="hover:text-[#043566] transition-colors flex items-center gap-1"><iconify-icon icon="solar:phone-bold"></iconify-icon> Call</a>
+      <div class="flex gap-5">
+        <a href="https://wa.me/66829595750" target="_blank" class="hover:text-[#25D366] transition-colors flex items-center gap-1.5"><iconify-icon icon="ri:whatsapp-fill"></iconify-icon> WhatsApp</a>
+        <a href="https://line.me/R/ti/p/~0970081294" target="_blank" class="hover:text-[#00B900] transition-colors flex items-center gap-1.5"><iconify-icon icon="ri:line-fill"></iconify-icon> LINE</a>
+        <a href="tel:+66970081294" class="hover:text-white transition-colors flex items-center gap-1.5"><iconify-icon icon="solar:phone-bold"></iconify-icon> Call</a>
       </div>
     </div>
   </div>
@@ -1401,68 +1431,108 @@ try{if(window.parent&&window.parent!==window){window.parent.promotekit_referral=
   }, { threshold: 0.5 });
   document.querySelectorAll('.count-up').forEach(el => countIo.observe(el));
 
-  // ═════ Results carousel (transform-based; drag / swipe / buttons / keyboard) ═════
+  // ═════ Results carousel (transform-based; infinite loop via cloned edge slides) ═════
   document.querySelectorAll('[data-carousel]').forEach(root => {
     const section   = root.closest('section');
     const viewport  = root.querySelector('[data-carousel-viewport]');
     const track     = root.querySelector('[data-carousel-track]');
-    const slides    = [...root.querySelectorAll('[data-carousel-slide]')];
+    const realSlides = [...root.querySelectorAll('[data-carousel-slide]')];
     const prevBtns  = section.querySelectorAll('[data-carousel-prev], [data-carousel-prev-mobile]');
     const nextBtns  = section.querySelectorAll('[data-carousel-next], [data-carousel-next-mobile]');
     const dots      = section.querySelectorAll('[data-carousel-dot]');
     const counter   = section.querySelector('[data-carousel-counter]');
-    if (!viewport || !track || !slides.length) return;
+    if (!viewport || !track || !realSlides.length) return;
+    const n = realSlides.length;
 
-    let current = 0;
-    let baseX   = 0;     // committed translateX for current slide
-    const pad2  = n => String(n).padStart(2, '0');
+    // Clone first + last slides to enable seamless infinite wrap.
+    // DOM order becomes: [cloneLast, real[0..n-1], cloneFirst]
+    const cloneLast  = realSlides[n - 1].cloneNode(true);
+    const cloneFirst = realSlides[0].cloneNode(true);
+    [cloneLast, cloneFirst].forEach(c => {
+      c.dataset.clone = 'true';
+      c.removeAttribute('data-carousel-slide');
+    });
+    track.insertBefore(cloneLast, realSlides[0]);
+    track.appendChild(cloneFirst);
+    const allSlides = [cloneLast, ...realSlides, cloneFirst]; // length n+2
 
-    // Compute translateX needed so that slides[i] is centered in the viewport.
-    const offsetFor = i => {
-      const s = slides[i];
+    let current = 0;   // logical index 0..n-1 (what dots/counter show)
+    let vIndex  = 1;   // visual index into allSlides (start on first real slide)
+    let baseX   = 0;
+    const pad2 = x => String(x).padStart(2, '0');
+
+    const offsetForV = v => {
+      const s = allSlides[v];
       return (viewport.clientWidth - s.offsetWidth) / 2 - s.offsetLeft;
     };
     const setX = (x, animate = true) => {
+      if (!animate) track.style.transition = 'none';
       track.style.transform = `translate3d(${x}px, 0, 0)`;
       if (!animate) {
-        track.style.transition = 'none';
-        requestAnimationFrame(() => { track.style.transition = ''; });
+        // Force reflow, then clear inline transition so CSS class re-applies next frame
+        void track.offsetHeight;
+        track.style.transition = '';
       }
     };
     const layout = (animate = true) => {
-      baseX = offsetFor(current);
+      baseX = offsetForV(vIndex);
       setX(baseX, animate);
     };
     const updateChrome = () => {
-      slides.forEach((s, i) => s.classList.toggle('is-active', i === current));
+      // Mark active on the real slide matching `current` — plus the clone that
+      // corresponds to it if we're on a clone (so the fade transition looks right).
+      allSlides.forEach(s => s.classList.remove('is-active'));
+      allSlides[vIndex].classList.add('is-active');
+      realSlides[current].classList.add('is-active');
       dots.forEach((d, i) => {
-        d.classList.toggle('bg-[#043566]',     i === current);
+        d.classList.toggle('bg-[#043566]',    i === current);
         d.classList.toggle('bg-[#043566]/25', i !== current);
-        d.classList.toggle('w-6',              i === current);
-        d.classList.toggle('w-2',              i !== current);
+        d.classList.toggle('w-6',             i === current);
+        d.classList.toggle('w-2',             i !== current);
       });
-      prevBtns.forEach(b => b.disabled = current === 0);
-      nextBtns.forEach(b => b.disabled = current === slides.length - 1);
-      if (counter) counter.textContent = `${pad2(current + 1)} / ${pad2(slides.length)}`;
+      if (counter) counter.textContent = `${pad2(current + 1)} / ${pad2(n)}`;
+      // Buttons never disabled — infinite
+      prevBtns.forEach(b => b.disabled = false);
+      nextBtns.forEach(b => b.disabled = false);
     };
-    const go = i => {
-      current = Math.max(0, Math.min(slides.length - 1, i));
+
+    // Step by ±1 logical slide, handling wrap via clones for seamless motion.
+    const step = dir => {
+      if (dir > 0) {
+        if (current === n - 1) { vIndex = n + 1; current = 0; }         // → cloneFirst, then silent reset
+        else                   { vIndex = vIndex + 1; current = current + 1; }
+      } else {
+        if (current === 0)     { vIndex = 0;     current = n - 1; }     // → cloneLast, then silent reset
+        else                   { vIndex = vIndex - 1; current = current - 1; }
+      }
+      updateChrome();
+      layout(true);
+    };
+    // Jump to a specific logical index (no wrap animation, used by dots)
+    const goTo = idx => {
+      current = ((idx % n) + n) % n;
+      vIndex  = current + 1;
       updateChrome();
       layout(true);
     };
 
-    // — Buttons
-    prevBtns.forEach(b => b.addEventListener('click', () => go(current - 1)));
-    nextBtns.forEach(b => b.addEventListener('click', () => go(current + 1)));
-    dots.forEach((d, i) => d.addEventListener('click', () => go(i)));
+    // After the transform transition ends on a clone, silently snap to its real twin.
+    track.addEventListener('transitionend', e => {
+      if (e.target !== track || e.propertyName !== 'transform') return;
+      if (vIndex === 0)      { vIndex = n;     layout(false); }   // cloneLast → real last
+      else if (vIndex === n + 1) { vIndex = 1; layout(false); }   // cloneFirst → real first
+    });
 
-    // — Drag / swipe (pointer events cover mouse + touch + pen)
+    // — Buttons + dots
+    prevBtns.forEach(b => b.addEventListener('click', () => step(-1)));
+    nextBtns.forEach(b => b.addEventListener('click', () => step(+1)));
+    dots.forEach((d, i) => d.addEventListener('click', () => goTo(i)));
+
+    // — Drag / swipe (pointer events)
     let dragging = false, startX = 0, deltaX = 0, pointerId = null;
     const onDown = e => {
-      dragging = true;
-      pointerId = e.pointerId;
-      startX = e.clientX;
-      deltaX = 0;
+      dragging = true; pointerId = e.pointerId;
+      startX = e.clientX; deltaX = 0;
       viewport.classList.add('is-dragging');
       try { viewport.setPointerCapture(pointerId); } catch (_) {}
     };
@@ -1477,9 +1547,9 @@ try{if(window.parent&&window.parent!==window){window.parent.promotekit_referral=
       viewport.classList.remove('is-dragging');
       try { viewport.releasePointerCapture(pointerId); } catch (_) {}
       const threshold = Math.max(40, viewport.clientWidth * 0.08);
-      if (deltaX >  threshold && current > 0)                  go(current - 1);
-      else if (deltaX < -threshold && current < slides.length - 1) go(current + 1);
-      else layout(true);                                        // snap back
+      if      (deltaX >  threshold) step(-1);
+      else if (deltaX < -threshold) step(+1);
+      else                          layout(true);  // snap back (no wrap)
       deltaX = 0;
     };
     viewport.addEventListener('pointerdown',   onDown);
@@ -1488,16 +1558,16 @@ try{if(window.parent&&window.parent!==window){window.parent.promotekit_referral=
     viewport.addEventListener('pointercancel', onUp);
     viewport.addEventListener('pointerleave',  onUp);
 
-    // — Keyboard arrows when carousel is in view
+    // — Keyboard arrows when carousel is visible
     let inView = false;
     new IntersectionObserver(([e]) => { inView = e.isIntersecting; }, { threshold: 0.3 }).observe(root);
     document.addEventListener('keydown', e => {
       if (!inView) return;
-      if (e.key === 'ArrowLeft')  { go(current - 1); e.preventDefault(); }
-      if (e.key === 'ArrowRight') { go(current + 1); e.preventDefault(); }
+      if (e.key === 'ArrowLeft')  { step(-1); e.preventDefault(); }
+      if (e.key === 'ArrowRight') { step(+1); e.preventDefault(); }
     });
 
-    // — Init (after fonts/images settle so offsetWidth is accurate) + resize
+    // — Init + resize
     const init = () => { updateChrome(); layout(false); };
     if (document.readyState === 'complete') requestAnimationFrame(init);
     else window.addEventListener('load', () => requestAnimationFrame(init), { once: true });
