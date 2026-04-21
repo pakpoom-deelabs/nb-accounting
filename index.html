@@ -396,6 +396,28 @@ try{if(window.parent&&window.parent!==window){window.parent.promotekit_referral=
         <iconify-icon icon="ri:whatsapp-fill" width="16"></iconify-icon>
         <span data-th>ติดต่อเรา</span><span data-en>Contact Us</span>
       </a>
+      <button id="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Menu" aria-expanded="false" class="md:hidden -mr-1 p-2 rounded-lg text-[#043566] hover:bg-neutral-100 transition">
+        <iconify-icon id="mobile-menu-icon" icon="solar:hamburger-menu-linear" width="26"></iconify-icon>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu dropdown -->
+  <div id="mobile-menu" class="md:hidden hidden border-t border-black/[0.06] bg-white/95 backdrop-blur-lg">
+    <div class="px-6 py-4 flex flex-col text-base font-medium text-neutral-700">
+      <a href="#services" class="py-3 border-b border-neutral-100 hover:text-[#043566] transition-colors" onclick="closeMobileMenu()"><span data-th>บริการ</span><span data-en>Services</span></a>
+      <a href="#promo" class="py-3 border-b border-neutral-100 hover:text-[#043566] transition-colors flex items-center gap-2" onclick="closeMobileMenu()">
+        <span data-th>โปรโมชั่น</span><span data-en>Promo</span>
+        <span class="w-1.5 h-1.5 bg-[#043566] rounded-full animate-pulse"></span>
+      </a>
+      <a href="#specialized" class="py-3 border-b border-neutral-100 hover:text-[#043566] transition-colors" onclick="closeMobileMenu()"><span data-th>เฉพาะทาง</span><span data-en>Specialized</span></a>
+      <a href="#about" class="py-3 border-b border-neutral-100 hover:text-[#043566] transition-colors" onclick="closeMobileMenu()"><span data-th>เกี่ยวกับเรา</span><span data-en>About</span></a>
+      <a href="#why" class="py-3 border-b border-neutral-100 hover:text-[#043566] transition-colors" onclick="closeMobileMenu()"><span data-th>ทำไมต้องเลือกเรา</span><span data-en>Why Us</span></a>
+      <a href="#contact" class="py-3 hover:text-[#043566] transition-colors" onclick="closeMobileMenu()"><span data-th>ติดต่อ</span><span data-en>Contact</span></a>
+      <a href="https://wa.me/66829595750" target="_blank" class="mt-4 flex sm:hidden items-center justify-center gap-2 text-sm font-medium text-white bg-[#043566] rounded-full px-5 py-3 shadow-lg shadow-[#043566]/25" onclick="closeMobileMenu()">
+        <iconify-icon icon="ri:whatsapp-fill" width="18"></iconify-icon>
+        <span data-th>ติดต่อเรา</span><span data-en>Contact Us</span>
+      </a>
     </div>
   </div>
 </nav>
@@ -1039,7 +1061,7 @@ try{if(window.parent&&window.parent!==window){window.parent.promotekit_referral=
         </div>
       </div>
 
-      <div class="w-full lg:w-1/2 flex justify-center lg:justify-end">
+      <div class="hidden lg:flex w-full lg:w-1/2 justify-center lg:justify-end">
         <div class="bg-white rounded-[2rem] p-8 shadow-[0_20px_40px_-12px_rgba(4,53,102,0.15)] border border-neutral-100 w-full max-w-md rotate-3 hover:rotate-0 transition-transform duration-500 ease-out">
           <div class="flex items-center justify-between mb-8 pb-6 border-b border-neutral-50">
             <div class="flex items-center gap-4">
@@ -1300,7 +1322,7 @@ try{if(window.parent&&window.parent!==window){window.parent.promotekit_referral=
         <div class="flex flex-col sm:flex-row justify-center flex-wrap gap-4">
           <a href="https://wa.me/66829595750" target="_blank" class="bg-[#25D366] text-white font-semibold px-8 py-4 rounded-full hover:bg-[#1ea952] transition-all hover:scale-105 flex items-center justify-center gap-2">
             <iconify-icon icon="ri:whatsapp-fill" width="22"></iconify-icon>
-            WhatsApp +66 82 959 5750
+            WhatsApp
           </a>
           <a href="https://line.me/R/ti/p/~0970081294" target="_blank" class="bg-[#00B900] text-white font-semibold px-8 py-4 rounded-full hover:bg-[#009b00] transition-all hover:scale-105 flex items-center justify-center gap-2">
             <iconify-icon icon="ri:line-fill" width="22"></iconify-icon>
@@ -1474,6 +1496,33 @@ try{if(window.parent&&window.parent!==window){window.parent.promotekit_referral=
     const next = html.lang === 'th' ? 'en' : 'th';
     html.lang = next;
     document.getElementById('lang-btn').textContent = next === 'th' ? 'EN' : 'TH';
+  }
+
+  // Mobile menu toggle
+  function toggleMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    const btn  = document.getElementById('mobile-menu-btn');
+    const icon = document.getElementById('mobile-menu-icon');
+    const isHidden = menu.classList.contains('hidden');
+    if (isHidden) {
+      menu.classList.remove('hidden');
+      icon.setAttribute('icon', 'solar:close-square-linear');
+      btn.setAttribute('aria-expanded', 'true');
+    } else {
+      menu.classList.add('hidden');
+      icon.setAttribute('icon', 'solar:hamburger-menu-linear');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  }
+  function closeMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    const btn  = document.getElementById('mobile-menu-btn');
+    const icon = document.getElementById('mobile-menu-icon');
+    if (menu && !menu.classList.contains('hidden')) {
+      menu.classList.add('hidden');
+      icon.setAttribute('icon', 'solar:hamburger-menu-linear');
+      btn.setAttribute('aria-expanded', 'false');
+    }
   }
 
   // Cookie banner
