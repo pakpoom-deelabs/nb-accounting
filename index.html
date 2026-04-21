@@ -389,15 +389,15 @@ try{if(window.parent&&window.parent!==window){window.parent.promotekit_referral=
     </div>
 
     <div class="flex items-center gap-2 sm:gap-3 shrink-0">
-      <button onclick="toggleLang()" class="text-xs font-bold border border-neutral-200 rounded-full px-3 py-1.5 hover:bg-neutral-50 transition">
+      <button onclick="toggleLang()" class="text-xs font-bold text-white border border-white/25 rounded-full px-3 py-1.5 hover:bg-white/10 transition">
         <span id="lang-btn">EN</span>
       </button>
       <a href="https://wa.me/66829595750" target="_blank" class="hidden md:flex items-center gap-2 text-sm font-medium text-white bg-[#043566] rounded-full px-5 py-2.5 hover:bg-[#032649] transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-[#043566]/25">
         <iconify-icon icon="ri:whatsapp-fill" width="16"></iconify-icon>
         <span data-th>ติดต่อเรา</span><span data-en>Contact Us</span>
       </a>
-      <button id="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Menu" aria-expanded="false" class="md:hidden p-2 rounded-lg text-[#043566] hover:bg-neutral-100 transition -mr-1">
-        <iconify-icon id="mobile-menu-icon" icon="solar:hamburger-menu-linear" width="26"></iconify-icon>
+      <button id="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Menu" aria-expanded="false" class="md:hidden p-2 rounded-lg text-white active:bg-white/10 transition -mr-1">
+        <iconify-icon id="mobile-menu-icon" icon="ri:menu-line" width="28"></iconify-icon>
       </button>
     </div>
   </div>
@@ -1505,7 +1505,7 @@ try{if(window.parent&&window.parent!==window){window.parent.promotekit_referral=
     const icon = document.getElementById('mobile-menu-icon');
     if (!menu || !btn || !icon) return;
     menu.classList.toggle('hidden', !open);
-    icon.setAttribute('icon', open ? 'solar:close-square-linear' : 'solar:hamburger-menu-linear');
+    icon.setAttribute('icon', open ? 'ri:close-line' : 'ri:menu-line');
     btn.setAttribute('aria-expanded', open ? 'true' : 'false');
   }
   function toggleMobileMenu() {
