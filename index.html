@@ -367,12 +367,12 @@ try{if(window.parent&&window.parent!==window){window.parent.promotekit_referral=
 
 <!-- ============ NAV ============ -->
 <nav class="sticky top-0 z-50 w-full glass border-b border-black/[0.04]">
-  <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-    <a href="#" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
-      <img src="images/logo.png" alt="NB Accounting" class="h-10 sm:h-14 md:h-[72px] w-auto object-contain">
-      <div class="leading-tight">
-        <div class="text-base sm:text-lg font-bold tracking-tight">NB Accounting</div>
-        <div class="hidden sm:block text-[11px] text-neutral-500 font-medium">Visa & Business Services</div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 md:h-20 flex items-center justify-between gap-3">
+    <a href="#" class="flex items-center gap-2.5 sm:gap-3 hover:opacity-80 transition-opacity min-w-0 flex-1">
+      <img src="images/logo.png" alt="NB Accounting" class="h-10 sm:h-12 md:h-[72px] w-auto object-contain shrink-0">
+      <div class="leading-tight min-w-0">
+        <div class="text-sm sm:text-base md:text-lg font-bold tracking-tight truncate">NB Accounting</div>
+        <div class="hidden md:block text-[11px] text-neutral-500 font-medium">Visa & Business Services</div>
       </div>
     </a>
 
@@ -388,15 +388,15 @@ try{if(window.parent&&window.parent!==window){window.parent.promotekit_referral=
       <a href="#contact" class="nav-link hover:text-[#043566] transition-colors"><span data-th>ติดต่อ</span><span data-en>Contact</span></a>
     </div>
 
-    <div class="flex items-center gap-3">
+    <div class="flex items-center gap-2 sm:gap-3 shrink-0">
       <button onclick="toggleLang()" class="text-xs font-bold border border-neutral-200 rounded-full px-3 py-1.5 hover:bg-neutral-50 transition">
         <span id="lang-btn">EN</span>
       </button>
-      <a href="https://wa.me/66829595750" target="_blank" class="hidden sm:flex items-center gap-2 text-sm font-medium text-white bg-[#043566] rounded-full px-5 py-2.5 hover:bg-[#032649] transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-[#043566]/25">
+      <a href="https://wa.me/66829595750" target="_blank" class="hidden md:flex items-center gap-2 text-sm font-medium text-white bg-[#043566] rounded-full px-5 py-2.5 hover:bg-[#032649] transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-[#043566]/25">
         <iconify-icon icon="ri:whatsapp-fill" width="16"></iconify-icon>
         <span data-th>ติดต่อเรา</span><span data-en>Contact Us</span>
       </a>
-      <button id="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Menu" aria-expanded="false" class="md:hidden -mr-1 p-2 rounded-lg text-[#043566] hover:bg-neutral-100 transition">
+      <button id="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Menu" aria-expanded="false" class="md:hidden p-2 rounded-lg text-[#043566] hover:bg-neutral-100 transition -mr-1">
         <iconify-icon id="mobile-menu-icon" icon="solar:hamburger-menu-linear" width="26"></iconify-icon>
       </button>
     </div>
@@ -414,7 +414,7 @@ try{if(window.parent&&window.parent!==window){window.parent.promotekit_referral=
       <a href="#about" class="py-3 border-b border-neutral-100 hover:text-[#043566] transition-colors" onclick="closeMobileMenu()"><span data-th>เกี่ยวกับเรา</span><span data-en>About</span></a>
       <a href="#why" class="py-3 border-b border-neutral-100 hover:text-[#043566] transition-colors" onclick="closeMobileMenu()"><span data-th>ทำไมต้องเลือกเรา</span><span data-en>Why Us</span></a>
       <a href="#contact" class="py-3 hover:text-[#043566] transition-colors" onclick="closeMobileMenu()"><span data-th>ติดต่อ</span><span data-en>Contact</span></a>
-      <a href="https://wa.me/66829595750" target="_blank" class="mt-4 flex sm:hidden items-center justify-center gap-2 text-sm font-medium text-white bg-[#043566] rounded-full px-5 py-3 shadow-lg shadow-[#043566]/25" onclick="closeMobileMenu()">
+      <a href="https://wa.me/66829595750" target="_blank" class="mt-4 flex items-center justify-center gap-2 text-sm font-medium text-white bg-[#043566] rounded-full px-5 py-3 shadow-lg shadow-[#043566]/25" onclick="closeMobileMenu()">
         <iconify-icon icon="ri:whatsapp-fill" width="18"></iconify-icon>
         <span data-th>ติดต่อเรา</span><span data-en>Contact Us</span>
       </a>
@@ -1499,31 +1499,30 @@ try{if(window.parent&&window.parent!==window){window.parent.promotekit_referral=
   }
 
   // Mobile menu toggle
+  function _setMobileMenu(open) {
+    const menu = document.getElementById('mobile-menu');
+    const btn  = document.getElementById('mobile-menu-btn');
+    const icon = document.getElementById('mobile-menu-icon');
+    if (!menu || !btn || !icon) return;
+    menu.classList.toggle('hidden', !open);
+    icon.setAttribute('icon', open ? 'solar:close-square-linear' : 'solar:hamburger-menu-linear');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
   function toggleMobileMenu() {
     const menu = document.getElementById('mobile-menu');
-    const btn  = document.getElementById('mobile-menu-btn');
-    const icon = document.getElementById('mobile-menu-icon');
-    const isHidden = menu.classList.contains('hidden');
-    if (isHidden) {
-      menu.classList.remove('hidden');
-      icon.setAttribute('icon', 'solar:close-square-linear');
-      btn.setAttribute('aria-expanded', 'true');
-    } else {
-      menu.classList.add('hidden');
-      icon.setAttribute('icon', 'solar:hamburger-menu-linear');
-      btn.setAttribute('aria-expanded', 'false');
-    }
+    _setMobileMenu(menu.classList.contains('hidden'));
   }
-  function closeMobileMenu() {
+  function closeMobileMenu() { _setMobileMenu(false); }
+  // Close on ESC / outside tap / breakpoint up to md
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMobileMenu(); });
+  document.addEventListener('click', e => {
     const menu = document.getElementById('mobile-menu');
     const btn  = document.getElementById('mobile-menu-btn');
-    const icon = document.getElementById('mobile-menu-icon');
-    if (menu && !menu.classList.contains('hidden')) {
-      menu.classList.add('hidden');
-      icon.setAttribute('icon', 'solar:hamburger-menu-linear');
-      btn.setAttribute('aria-expanded', 'false');
-    }
-  }
+    if (!menu || menu.classList.contains('hidden')) return;
+    if (menu.contains(e.target) || btn.contains(e.target)) return;
+    closeMobileMenu();
+  });
+  window.addEventListener('resize', () => { if (window.innerWidth >= 768) closeMobileMenu(); });
 
   // Cookie banner
   function hasCookieChoice() {
