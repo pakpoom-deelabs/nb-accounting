@@ -5,5 +5,4 @@ Allow: /
 Disallow: /_internal/
 Disallow: /_drafts/
 
-# Sitemap — update the domain to your production URL
-Sitemap: https://nbaccounting.com/sitemap.xml
+Sitemap: https://nbaccountingphuket.com/sitemap.xml

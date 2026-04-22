@@ -1,48 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Update <loc> URLs once your production domain is confirmed -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>https://nbaccounting.com/</loc>
-    <lastmod>2026-04-16</lastmod>
+    <loc>https://nbaccountingphuket.com/</loc>
+    <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="th" href="https://nbaccounting.com/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nbaccounting.com/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://nbaccountingphuket.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nbaccountingphuket.com/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nbaccountingphuket.com/"/>
   </url>
 
   <url>
-    <loc>https://nbaccounting.com/#services</loc>
-    <lastmod>2026-04-16</lastmod>
+    <loc>https://nbaccountingphuket.com/#services</loc>
+    <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://nbaccounting.com/#specialized</loc>
-    <lastmod>2026-04-16</lastmod>
+    <loc>https://nbaccountingphuket.com/#promo</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://nbaccountingphuket.com/#specialized</loc>
+    <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://nbaccounting.com/#about</loc>
-    <lastmod>2026-04-16</lastmod>
+    <loc>https://nbaccountingphuket.com/#about</loc>
+    <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://nbaccounting.com/#team</loc>
-    <lastmod>2026-04-16</lastmod>
+    <loc>https://nbaccountingphuket.com/#why</loc>
+    <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://nbaccounting.com/#contact</loc>
-    <lastmod>2026-04-16</lastmod>
+    <loc>https://nbaccountingphuket.com/#contact</loc>
+    <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
