@@ -69,6 +69,31 @@ root.querySelectorAll('script').forEach((el) => {
   if (el.text.includes('function toggleLang')) el.remove();
 });
 
+const rewriteAttr = (attr) => (el) => {
+  const val = el.getAttribute(attr);
+  if (!val) return;
+  if (/^(https?:|mailto:|tel:|\/|#|data:|javascript:)/i.test(val)) return;
+  el.setAttribute(attr, `/${val}`);
+};
+root.querySelectorAll('img[src]').forEach(rewriteAttr('src'));
+root.querySelectorAll('source[src]').forEach(rewriteAttr('src'));
+root.querySelectorAll('source[srcset]').forEach((el) => {
+  const val = el.getAttribute('srcset');
+  if (!val) return;
+  const rewritten = val.split(',').map((part) => {
+    const [url, size] = part.trim().split(/\s+/, 2);
+    if (/^(https?:|\/|data:)/i.test(url)) return part.trim();
+    return size ? `/${url} ${size}` : `/${url}`;
+  }).join(', ');
+  el.setAttribute('srcset', rewritten);
+});
+root.querySelectorAll('link[href]').forEach((el) => {
+  const rel = (el.getAttribute('rel') || '').toLowerCase();
+  if (rel === 'canonical' || rel === 'alternate') return;
+  rewriteAttr('href')(el);
+});
+root.querySelectorAll('script[src]').forEach(rewriteAttr('src'));
+
 const output = root.toString();
 
 const assertions = [
