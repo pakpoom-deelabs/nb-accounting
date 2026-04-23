@@ -1,7 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
-  "trailingSlash": false,
+  "trailingSlash": true,
+  "buildCommand": "npm install && npm run build",
   "headers": [
     {
       "source": "/(.*)",
@@ -35,6 +36,12 @@
   "redirects": [
     { "source": "/home",    "destination": "/", "permanent": true },
     { "source": "/contact", "destination": "/#contact", "permanent": false },
-    { "source": "/services","destination": "/#services", "permanent": false }
+    { "source": "/services","destination": "/#services", "permanent": false },
+    {
+      "source": "/",
+      "has": [{ "type": "query", "key": "lang", "value": "en" }],
+      "destination": "/en/",
+      "permanent": true
+    }
   ]
 }

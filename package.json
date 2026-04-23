@@ -6,9 +6,10 @@
   "scripts": {
     "dev":     "npx --yes serve -l 3000 .",
     "start":   "npx --yes serve -l 3000 .",
+    "build":   "node scripts/build-en.mjs",
     "format":  "npx --yes prettier --write \"**/*.{html,css,js,json,md}\"",
     "validate":"npx --yes html-validate index.html",
-    "preview": "npx --yes serve . -p 5000"
+    "preview": "npm run build && npx --yes serve . -p 5000"
   },
   "keywords": [
     "accounting",
@@ -25,5 +26,8 @@
   "license": "UNLICENSED",
   "engines": {
     "node": ">=18"
+  },
+  "devDependencies": {
+    "node-html-parser": "6.1.13"
   }
 }
