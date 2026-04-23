@@ -1548,7 +1548,280 @@
   </div>
 </div>
 
+<script>
+  // Language toggle
+  function toggleLang() {
+    const html = document.documentElement;
+    const next = html.lang === 'th' ? 'en' : 'th';
+    html.lang = next;
+    document.getElementById('lang-btn').textContent = next === 'th' ? 'EN' : 'TH';
+  }
 
+  // Mobile menu toggle
+  function _setMobileMenu(open) {
+    const menu = document.getElementById('mobile-menu');
+    const btn  = document.getElementById('mobile-menu-btn');
+    const icon = document.getElementById('mobile-menu-icon');
+    if (!menu || !btn || !icon) return;
+    menu.classList.toggle('hidden', !open);
+    icon.setAttribute('icon', open ? 'ri:close-line' : 'ri:menu-line');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  function toggleMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    _setMobileMenu(menu.classList.contains('hidden'));
+  }
+  function closeMobileMenu() { _setMobileMenu(false); }
+  // Close on ESC / outside tap / breakpoint up to md
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMobileMenu(); });
+  document.addEventListener('click', e => {
+    const menu = document.getElementById('mobile-menu');
+    const btn  = document.getElementById('mobile-menu-btn');
+    if (!menu || menu.classList.contains('hidden')) return;
+    if (menu.contains(e.target) || btn.contains(e.target)) return;
+    closeMobileMenu();
+  });
+  window.addEventListener('resize', () => { if (window.innerWidth >= 768) closeMobileMenu(); });
+
+  // Cookie banner
+  function hasCookieChoice() {
+    return document.cookie.split('; ').some(c => c.startsWith('nb_cookie='));
+  }
+  if (!hasCookieChoice()) {
+    setTimeout(() => document.getElementById('cookie-banner').classList.remove('hidden'), 1200);
+  }
+  function acceptCookies() {
+    document.cookie = 'nb_cookie=accepted; max-age=31536000; path=/';
+    document.getElementById('cookie-banner').classList.add('hidden');
+  }
+  function rejectCookies() {
+    document.cookie = 'nb_cookie=rejected; max-age=31536000; path=/';
+    document.getElementById('cookie-banner').classList.add('hidden');
+  }
+
+  // ═════ Scroll progress bar ═════
+  const progressBar = document.getElementById('scroll-progress');
+  function updateProgress() {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    progressBar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  // ═════ Fade-up + stagger on scroll ═════
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+  document.querySelectorAll('.fade-up, .stagger').forEach(el => io.observe(el));
+
+  // ═════ Count-up animation on stats ═════
+  function easeOutQuart(t) { return 1 - Math.pow(1 - t, 4); }
+  function animateCount(el) {
+    const target = parseInt(el.dataset.target, 10);
+    const suffix = el.dataset.suffix || '';
+    const duration = 1800;
+    const start = performance.now();
+    function tick(now) {
+      const t = Math.min((now - start) / duration, 1);
+      const value = Math.round(easeOutQuart(t) * target);
+      el.textContent = value.toLocaleString() + suffix;
+      if (t < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+  const countIo = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        animateCount(e.target);
+        countIo.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('.count-up').forEach(el => countIo.observe(el));
+
+  // ═════ Results carousel (transform-based; infinite loop via cloned edge slides) ═════
+  document.querySelectorAll('[data-carousel]').forEach(root => {
+    const section   = root.closest('section');
+    const viewport  = root.querySelector('[data-carousel-viewport]');
+    const track     = root.querySelector('[data-carousel-track]');
+    const realSlides = [...root.querySelectorAll('[data-carousel-slide]')];
+    const prevBtns  = section.querySelectorAll('[data-carousel-prev], [data-carousel-prev-mobile]');
+    const nextBtns  = section.querySelectorAll('[data-carousel-next], [data-carousel-next-mobile]');
+    const dots      = section.querySelectorAll('[data-carousel-dot]');
+    const counter   = section.querySelector('[data-carousel-counter]');
+    if (!viewport || !track || !realSlides.length) return;
+    const n = realSlides.length;
+
+    // Clone first + last slides to enable seamless infinite wrap.
+    // DOM order becomes: [cloneLast, real[0..n-1], cloneFirst]
+    const cloneLast  = realSlides[n - 1].cloneNode(true);
+    const cloneFirst = realSlides[0].cloneNode(true);
+    [cloneLast, cloneFirst].forEach(c => {
+      c.dataset.clone = 'true';
+      c.removeAttribute('data-carousel-slide');
+    });
+    track.insertBefore(cloneLast, realSlides[0]);
+    track.appendChild(cloneFirst);
+    const allSlides = [cloneLast, ...realSlides, cloneFirst]; // length n+2
+
+    let current = 0;   // logical index 0..n-1 (what dots/counter show)
+    let vIndex  = 1;   // visual index into allSlides (start on first real slide)
+    let baseX   = 0;
+    const pad2 = x => String(x).padStart(2, '0');
+
+    const offsetForV = v => {
+      const s = allSlides[v];
+      return (viewport.clientWidth - s.offsetWidth) / 2 - s.offsetLeft;
+    };
+    const setX = (x, animate = true) => {
+      if (!animate) track.style.transition = 'none';
+      track.style.transform = `translate3d(${x}px, 0, 0)`;
+      if (!animate) {
+        // Force reflow, then clear inline transition so CSS class re-applies next frame
+        void track.offsetHeight;
+        track.style.transition = '';
+      }
+    };
+    const layout = (animate = true) => {
+      baseX = offsetForV(vIndex);
+      setX(baseX, animate);
+    };
+    const updateChrome = () => {
+      // Mark active on the real slide matching `current` — plus the clone that
+      // corresponds to it if we're on a clone (so the fade transition looks right).
+      allSlides.forEach(s => s.classList.remove('is-active'));
+      allSlides[vIndex].classList.add('is-active');
+      realSlides[current].classList.add('is-active');
+      dots.forEach((d, i) => {
+        d.classList.toggle('bg-[#043566]',    i === current);
+        d.classList.toggle('bg-[#043566]/25', i !== current);
+        d.classList.toggle('w-6',             i === current);
+        d.classList.toggle('w-2',             i !== current);
+      });
+      if (counter) counter.textContent = `${pad2(current + 1)} / ${pad2(n)}`;
+      // Buttons never disabled — infinite
+      prevBtns.forEach(b => b.disabled = false);
+      nextBtns.forEach(b => b.disabled = false);
+    };
+
+    // Step by ±1 logical slide, handling wrap via clones for seamless motion.
+    const step = dir => {
+      if (dir > 0) {
+        if (current === n - 1) { vIndex = n + 1; current = 0; }         // → cloneFirst, then silent reset
+        else                   { vIndex = vIndex + 1; current = current + 1; }
+      } else {
+        if (current === 0)     { vIndex = 0;     current = n - 1; }     // → cloneLast, then silent reset
+        else                   { vIndex = vIndex - 1; current = current - 1; }
+      }
+      updateChrome();
+      layout(true);
+    };
+    // Jump to a specific logical index (no wrap animation, used by dots)
+    const goTo = idx => {
+      current = ((idx % n) + n) % n;
+      vIndex  = current + 1;
+      updateChrome();
+      layout(true);
+    };
+
+    // After the transform transition ends on a clone, silently snap to its real twin.
+    track.addEventListener('transitionend', e => {
+      if (e.target !== track || e.propertyName !== 'transform') return;
+      if (vIndex === 0)      { vIndex = n;     layout(false); }   // cloneLast → real last
+      else if (vIndex === n + 1) { vIndex = 1; layout(false); }   // cloneFirst → real first
+    });
+
+    // — Buttons + dots
+    prevBtns.forEach(b => b.addEventListener('click', () => step(-1)));
+    nextBtns.forEach(b => b.addEventListener('click', () => step(+1)));
+    dots.forEach((d, i) => d.addEventListener('click', () => goTo(i)));
+
+    // — Drag / swipe (pointer events)
+    let dragging = false, startX = 0, deltaX = 0, pointerId = null;
+    const onDown = e => {
+      dragging = true; pointerId = e.pointerId;
+      startX = e.clientX; deltaX = 0;
+      viewport.classList.add('is-dragging');
+      try { viewport.setPointerCapture(pointerId); } catch (_) {}
+    };
+    const onMove = e => {
+      if (!dragging) return;
+      deltaX = e.clientX - startX;
+      setX(baseX + deltaX, false);
+    };
+    const onUp = () => {
+      if (!dragging) return;
+      dragging = false;
+      viewport.classList.remove('is-dragging');
+      try { viewport.releasePointerCapture(pointerId); } catch (_) {}
+      const threshold = Math.max(40, viewport.clientWidth * 0.08);
+      if      (deltaX >  threshold) step(-1);
+      else if (deltaX < -threshold) step(+1);
+      else                          layout(true);  // snap back (no wrap)
+      deltaX = 0;
+    };
+    viewport.addEventListener('pointerdown',   onDown);
+    viewport.addEventListener('pointermove',   onMove);
+    viewport.addEventListener('pointerup',     onUp);
+    viewport.addEventListener('pointercancel', onUp);
+    viewport.addEventListener('pointerleave',  onUp);
+
+    // — Keyboard arrows when carousel is visible
+    let inView = false;
+    new IntersectionObserver(([e]) => { inView = e.isIntersecting; }, { threshold: 0.3 }).observe(root);
+    document.addEventListener('keydown', e => {
+      if (!inView) return;
+      if (e.key === 'ArrowLeft')  { step(-1); e.preventDefault(); }
+      if (e.key === 'ArrowRight') { step(+1); e.preventDefault(); }
+    });
+
+    // — Init + resize
+    const init = () => { updateChrome(); layout(false); };
+    if (document.readyState === 'complete') requestAnimationFrame(init);
+    else window.addEventListener('load', () => requestAnimationFrame(init), { once: true });
+    let rTO;
+    window.addEventListener('resize', () => {
+      clearTimeout(rTO);
+      rTO = setTimeout(() => layout(false), 120);
+    });
+  });
+
+  // ═════ Parallax tilt on hero blobs (subtle mouse follow) ═════
+  const hero = document.querySelector('.blob-1')?.closest('.relative');
+  if (hero && window.matchMedia('(hover: hover)').matches) {
+    hero.addEventListener('mousemove', e => {
+      const r = hero.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width - 0.5;
+      const y = (e.clientY - r.top) / r.height - 0.5;
+      const b1 = hero.querySelector('.blob-1');
+      const b2 = hero.querySelector('.blob-2');
+      if (b1) b1.style.translate = `${x * -18}px ${y * -18}px`;
+      if (b2) b2.style.translate = `${x * 18}px ${y * 18}px`;
+    });
+  }
+
+  // ═════ Smooth scroll with offset for sticky nav ═════
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href');
+      if (id.length < 2) return;
+      const target = document.querySelector(id);
+      if (target) {
+        e.preventDefault();
+        const y = target.getBoundingClientRect().top + window.scrollY - 80;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    });
+  });
+</script>
 
 </body>
 </html>

@@ -65,9 +65,10 @@ if (langBtn) {
   langBtn.replaceWith(anchor);
 }
 
-root.querySelectorAll('script').forEach((el) => {
-  if (el.text.includes('function toggleLang')) el.remove();
-});
+// Leave inline scripts intact — toggleLang is defined in the same block as
+// animations/mobile-menu/count-up. The EN page never calls toggleLang (the
+// lang button is replaced with an <a href="/">), so it stays as harmless
+// dead code. Removing the whole <script> kills all the site's JS.
 
 const rewriteAttr = (attr) => (el) => {
   const val = el.getAttribute(attr);
@@ -99,7 +100,7 @@ const output = root.toString();
 const assertions = [
   { pattern: /\sdata-th(\s|=|>)/, msg: 'Post-build: data-th attribute still present in EN output' },
   { pattern: /\sdata-en(\s|=|>)/, msg: 'Post-build: data-en attribute still present in EN output' },
-  { pattern: /toggleLang/, msg: 'Post-build: toggleLang function still present in EN output' },
+  { pattern: /onclick="toggleLang\(\)"/, msg: 'Post-build: toggleLang button still invoked in EN output' },
   { pattern: /promotekit_referral/, msg: 'Post-build: promotekit script still present in EN output' },
 ];
 for (const { pattern, msg } of assertions) {
