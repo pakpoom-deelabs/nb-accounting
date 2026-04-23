@@ -2,7 +2,6 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
   "trailingSlash": true,
-  "buildCommand": "npm install && npm run build",
   "headers": [
     {
       "source": "/(.*)",
